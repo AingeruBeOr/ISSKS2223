@@ -4,5 +4,5 @@ ISSKS (Informazio Sistemen Seguritatea Kudeatzeko Sistemak) irakasgairen Web Sis
 ## Taldekideak
 - Ainoa Sanchez
 - Maitane Urruela
-- Aingeru Bellido (prueba del labo 2 firmar commit)
+- Aingeru Bellido
 ## Docker-en hedatzeko argibideak
