@@ -3,7 +3,7 @@
   $hostname = "db";
   $username = "admin";
   $password = "test";
-  $db = "database";
+  $db = "database.liburua";
 
   $conn = mysqli_connect($hostname,$username,$password,$db);
   if ($conn->connect_error) {
@@ -38,5 +38,7 @@ function cargarTabla($conn){
     	<td>{$row['IZENBURUA']}</td> 
     	<td>{$row['IDAZLEA']}</td>
    	</tr><br>";
-}
+   	}
+   }
+
 ?>
