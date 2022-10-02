@@ -9,6 +9,17 @@
   if ($conn->connect_error) {
     die("Database connection failed: " . $conn->connect_error);
   }
+  function cargardb($conn){
+  	$hostname = "db";
+  	$username = "admin";
+  	$password = "test";
+  	$db = "database.liburua";
+
+  	$conn = mysqli_connect($hostname,$username,$password,$db);
+  	if ($conn->connect_error) {
+   	 die("Database connection failed: " . $conn->connect_error);
+  	}
+  }
   
   function insert($conn){
 	$IZENBURUA = $_POST['IZENBURUA'];
@@ -29,6 +40,7 @@ function delete($conn){
 	
 }
 function cargarTabla($conn){
+	cargardb($conn);
 	$query = mysqli_query($conn, "SELECT IZENBURUA, IDAZLEA FROM liburua")
    or die (mysqli_error($conn));
 
