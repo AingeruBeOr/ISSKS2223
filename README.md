@@ -6,10 +6,10 @@ ISSKS (Informazio Sistemen Seguritatea Kudeatzeko Sistemak) irakasgairen Web Sis
 - Ainoa Sanchez
 - Maitane Urruela
 ## Docker-en hedatzeko argibideak
-###Requirements
+### Requirements
 - Docker instalatuta izatea
 - Git instalatuta izatea
-###Pausuak
+### Pausuak
 1. Errepositorio hau makina lokalean klonatu.
 2. Errepositorioa dagoen direktorioan gaudela ziurtatu.
 3. "Dockerfile" bidez sortzen den irudia sortu: `docker build -t "web" .`
