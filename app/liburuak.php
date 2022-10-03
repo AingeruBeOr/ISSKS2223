@@ -3,7 +3,7 @@
   $hostname = "db";
   $username = "admin";
   $password = "test";
-  $db = "database.liburua";
+  $db = "liburua";
 
   $conn = mysqli_connect($hostname,$username,$password,$db);
   if ($conn->connect_error) {
