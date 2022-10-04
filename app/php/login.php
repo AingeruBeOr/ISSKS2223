@@ -16,13 +16,16 @@
         die("Database connection failed: " . $conn->connect_error);
     }
 
-    $query = mysqli_query($conn, "SELECT Izen_Abizenak FROM usuarios WHERE Izen_Abizenak = '".$erabiltzaile."'") or die (mysqli_error($conn));
+    $query = mysqli_query($conn, "SELECT Izen_Abizenak FROM usuarios WHERE Izen_Abizenak = '".$erabiltzaile."' and Pasahitza = '".$pasahitza."'") or die (mysqli_error($conn));
     $num_rows = mysqli_num_rows($query);
 
     if($num_rows == 1){
-        echo "Ongi etorri " .$erabiltzaile;
+        header("Location: ../orriak/user_menu/user_menu.html"); //erabiltzailea eta pasahitza ondo sartu badira, "user_menu.html" orrira joango gara.
     }
     else{
-        header("Location: ../index.html"); //erabiltzailea ez bada existitzen, "../index.html" orrialdera bueltatuko gara.
+        echo "Ongi etorri " .$erabiltzaile;
+        header("Location: ../index.html"); 
     }
+
+    mysqli_close($conn);
 ?>
