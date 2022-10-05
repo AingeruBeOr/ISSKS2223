@@ -6,19 +6,20 @@
     </head>
     <body>
         <div class="login-page">
-            <div class="form">
-                <form class="resgister-form" method="post">
-                    Izen Abizenak: <input type="text" placeholder="Zure erabiltzailea sartu" required><br>
-                    NAN: <input type="text" placeholder="11111111-Z" required><br>
-                    Telefonoa: <input type="text" placeholder="123456789" required><br>
-                    Jaiotze data: <input type="date" required><br>
-                    Email: <input type="email" placeholder="adibidea@enpresa.luzapen" required><br>
-                    Pasahitza: <input type= "password" placeholder="Sartu zure pasahitza" required><br>
-                    Konfirmazioa: <input type= "password" placeholder="Sartu zure pasahitza berriz ere" required><br>
+            <div class="form" id="grupo__usuario">
+                <form class="resgister-form" id="formulario" method="post">
+                    Izen Abizenak: <input type="text" name="izena" placeholder="Zure erabiltzailea sartu" required><br>
+                    NAN: <input type="text" name="nan" placeholder="11111111-Z" required><br>
+                    Telefonoa: <input type="text" name="telefonoa" placeholder="123456789" required><br>
+                    Jaiotze data: <input type="date" name="jaiotzedata" required><br>
+                    Email: <input type="email" name="email" placeholder="adibidea@enpresa.luzapen" required><br>
+                    Pasahitza: <input type= "password" name="pasahitza" placeholder="Sartu zure pasahitza" required><br>
+                    Konfirmazioa: <input type= "password" name="pasahitza2" placeholder="Sartu zure pasahitza berriz ere" required><br>
                     <button type="submit" name="erregistratu">Erregistratu</button>
                     <p class="message">Jadanik erregistratuta? <a href="../index.html">Identifikatu</a></p>       
                 </form>
             </div>
         </div>
+        <script src="../js/erregistro.js"></script>
     </body>
 </html>
