@@ -5,21 +5,39 @@
         <link rel="stylesheet" type="text/css" href="../estiloak/index.css">
     </head>
     <body>
-        <div class="login-page">
-            <div class="form" id="grupo__usuario">
-                <form class="resgister-form" id="formulario" method="post">
-                    Izen Abizenak: <input type="text" name="izena" placeholder="Zure erabiltzailea sartu" required><br>
-                    NAN: <input type="text" name="nan" placeholder="11111111-Z" required><br>
-                    Telefonoa: <input type="text" name="telefonoa" placeholder="123456789" required><br>
-                    Jaiotze data: <input type="date" name="jaiotzedata" required><br>
-                    Email: <input type="email" name="email" placeholder="adibidea@enpresa.luzapen" required><br>
-                    Pasahitza: <input type= "password" name="pasahitza" placeholder="Sartu zure pasahitza" required><br>
-                    Konfirmazioa: <input type= "password" name="pasahitza2" placeholder="Sartu zure pasahitza berriz ere" required><br>
-                    <button type="submit" name="erregistratu">Erregistratu</button>
-                    <p class="message">Jadanik erregistratuta? <a href="../index.html">Identifikatu</a></p>       
-                </form>
+	<main>
+	    <div class="login-page">
+		    <div class="form">
+			<form class="resgister-form" id="formulario" method="post">
+			    <div class="formulario__grupo" id="grupo__izena"> 
+			    	Izen Abizenak: <input type="text" placeholder="Zure erabiltzailea sartu" required>
+			    </div>
+			    <div class="formulario__grupo" id="grupo__nan">
+			   	NAN: <input type="text" placeholder="11111111-Z" required>
+			    </div>
+			    <div class="formulario__grupo" id="grupo__telefonoa">
+			    	Telefonoa: <input type="text" placeholder="123456789" required>
+			    </div>
+			    <div class="formulario__grupo" id="grupo__jaiotzedata">
+			     	Jaiotze data: <input type="date" required>
+			    </div>
+			    <div class="formulario__grupo" id="grupo__email">
+			    	Email: <input type="email" placeholder="adibidea@enpresa.luzapen" required>
+			    </div>
+			    <div class="formulario__grupo" id="grupo__pasahitza">
+			    	Pasahitza: <input type= "password" placeholder="Sartu zure pasahitza" required>
+			    </div>
+			    <div class="formulario__grupo" id="grupo__pasahitza2">
+			    	Konfirmazioa: <input type= "password" placeholder="Sartu zure pasahitza berriz ere" required>
+			    </div>
+				    
+			    <button type="submit" name="erregistratu">Erregistratu</button>
+			    <p class="message">Jadanik erregistratuta? <a href="../index.html">Identifikatu</a></p>       
+			</form>
+		    </div>
             </div>
-        </div>
-        <script src="../js/erregistro.js"></script>
+            <script src="../js/erregistro.js"></script>
+	    <!--<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script> ESTO NO SE Q ES EXACTAMENTE-->
+        </main>
     </body>
 </html>
