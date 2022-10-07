@@ -3,7 +3,7 @@
 ISSKS (Informazio Sistemen Seguritatea Kudeatzeko Sistemak) irakasgairen Web Sistema arloko proiektua.
 ## Taldekideak
 - Aingeru Bellido
-- Ainoa Sanchez
+- Ainhoa Sanchez
 - Maitane Urruela
 ## Docker-en hedatzeko argibideak
 ### Requirements
