@@ -1,14 +1,18 @@
 # ISSKS2223
+
 ## Proiektuaren deskripzioa
 ISSKS (Informazio Sistemen Seguritatea Kudeatzeko Sistemak) irakasgairen Web Sistema arloko proiektua.
+
 ## Taldekideak
 - Aingeru Bellido
 - Ainhoa Sanchez
 - Maitane Urruela
+
 ## Docker-en hedatzeko argibideak
 ### Requirements
 - Docker instalatuta izatea
 - Git instalatuta izatea
+
 ### Pausuak
 1. Errepositorio hau makina lokalean klonatu.
 2. Errepositorioa dagoen direktorioan gaudela ziurtatu.
