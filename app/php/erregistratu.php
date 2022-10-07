@@ -5,7 +5,7 @@
     $password = "test";
     $db = "database";
 
-    //index.html orritik "POST" bidez lortu ditugun aldagaik:
+    //erregistratu.html orritik "POST" bidez lortu ditugun aldagaiak:
     $Izena = $_POST["Izena"];
     $NAN = $_POST["NAN"];
     $Telefonoa = $_POST["Telefonoa"];
@@ -22,8 +22,8 @@
         die("Database connection failed: " . $conn->connect_error);
     }
 
-    $insert = "INSERT INTO usuarios (DNI,Izen_Abizenak,Telefonoa,Jaiotze_Data,Email,Pasahitza) 
-               VALUES (".$DNI.",".$Izena.",".$Telefonoa.",".$Jaiotze_data.",".$email.",".$Pasahitza.")" 
+    $insert = "INSERT INTO usuarios (`DNI`,`Izen_Abizenak`,`Telefonoa`,`Jaiotze_Data`,`Email`,`Pasahitza`) 
+               VALUES ('$NAN','$Izena', '$Telefonoa' ,'$Jaiotze_data','$email','$Pasahitza')" ;
     $query = mysqli_query($conn, $insert) or die (mysqli_error($conn));
 
     header("Location: ../orriak/user_menu/user_menu.html"); //erabiltzailea eta pasahitza ondo sartu badira, "user_menu.html" orrira joango gara.
