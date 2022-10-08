@@ -19,11 +19,10 @@
     $query = mysqli_query($conn, "SELECT Izen_Abizenak FROM usuarios WHERE Izen_Abizenak = '".$erabiltzaile."' and Pasahitza = '".$pasahitza."'") or die (mysqli_error($conn));
     $num_rows = mysqli_num_rows($query);
 
-    if($num_rows == 1){
+    if($num_rows >= 1){
         header("Location: ../orriak/user_menu/user_menu.html"); //erabiltzailea eta pasahitza ondo sartu badira, "user_menu.html" orrira joango gara.
     }
     else{
-        echo "Ongi etorri " .$erabiltzaile;
         header("Location: ../index.html"); 
     }
 
