@@ -36,6 +36,7 @@
 	$query = mysqli_query($conn, "SELECT IZENBURUA, IDAZLEA FROM liburua")
    or die (mysqli_error($conn));
 	$lerro=0;
+
 	while ($row = mysqli_fetch_array($query)) {
 		$lerro=$lerro+1;
 	  echo
@@ -43,8 +44,8 @@
 	   		<td> ".$lerro." </td>
 	    	<td>{$row['IZENBURUA']}</td> 
 	    	<td>{$row['IDAZLEA']}</td>
-			<td> <img src=lapiz.png width=30></td>
-			<td> <img src=papelera.png width=30></td>
+			<td> <a href=../../index.html><img src=lapiz.png width=30></a></td>
+			<td> <a href=> <img src=papelera.png width=30></td>
 		
 	   </tr>";
    
