@@ -1,4 +1,5 @@
 <?php
+    session_start(); //TODO
     //datu basearen konexioa ahalbidetzen dituzten aldagaiak:
     $hostname = "db";
     $username = "admin";
