@@ -20,12 +20,13 @@
 	<head>
 		<title>Web Sistema</title>
 		<link rel="stylesheet" type="text/css" href="../../estiloak/general.css">
-        <link rel="stylesheet" type="text/css" href="../../estiloak/index.css">
+		<link rel="stylesheet" type="text/css" href="../../estiloak/user_menu/liburu_zerrenda.css">
+        <!-- <link rel="stylesheet" type="text/css" href="../../estiloak/index.css"> -->
 	</head>
 	<body>
 
 		<br>
-		<div class="form">
+		<div class="laukia">
 			<table border="1">
 				<tr>
 					<th></th>
