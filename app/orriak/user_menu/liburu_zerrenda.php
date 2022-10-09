@@ -34,7 +34,7 @@
 								<td>'.$izenburua.'</td> 
 								<td>'.$idazle.'</td>
 								<td><button onclick="editatu('.$isbn.')"><img src=../../irudiak/lapiz.png width=30></button></td>
-								<td><button onclick="ezabatu()"><img src=../../irudiak/papelera.png width=30></button></td>
+								<td><button onclick="ezabatu('.$isbn.')"><img src=../../irudiak/papelera.png width=30></button></td>
 							</tr>';
 					}
 					echo "<script type='text/javascript' src='../../js/liburu_zerrenda.js'></script>";
