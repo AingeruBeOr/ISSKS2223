@@ -9,7 +9,7 @@
         <main>
             <div class="login-page">
                 <div class="form">
-                    <form class="resgister-form" id="liburuDatu" method="post" action="../../php/liburuak_sartu.php">
+                    <form class="resgister-form" id="liburuDatu" method="post" action="../../config_php/liburuak_sartu.php">
                         Izenburua: <input type="text" name="izenburua" required>
                         Idazlea: <input type="text" name="idazlea" required>
                         Argitalpen data: <input type="date" name="ArgitalpenData"  required>

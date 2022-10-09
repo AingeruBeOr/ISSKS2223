@@ -3,5 +3,7 @@ function editatu(ISBN){
 }
 
 function ezabatu(ISBN,izenburu,idazle){
-    window.alert('Seguru zaude ' + izenburu + ' liburua ' + idazle + ' idazlearena ezabatu nahi duzula datu basetik');
+    var res = window.confirm('Seguru zaude ' + izenburu + ' liburua ' + idazle + ' idazlearena ezabatu nahi duzula datu basetik?');
+    if(res) window.location.href = "../../liburua_ezabatu.php?isbn=" + ISBN;
+    else console.log("Ez");
 }

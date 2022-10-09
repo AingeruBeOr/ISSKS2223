@@ -1,19 +1,4 @@
-<?php 
-
-	//datu basearen konexioa ahalbidetzen dituzten aldagaiak:
-    $hostname = "db";
-    $username = "admin";
-    $password = "test";
-    $db = "database";
-
-
-    //DB-arekin konexioa:
-	$conn = mysqli_connect($hostname,$username,$password,$db);
-  	if ($conn->connect_error) {
-    	die("Database connection failed: " . $conn->connect_error);
-  	}
-?>
-
+<?php include '../../config_php/db_link.php'; ?>
 
 <!DOCTYPE html>
 <html>
@@ -40,14 +25,17 @@
 
 					while ($row = mysqli_fetch_array($query)) {
 						$lerro=$lerro+1;
+						$izenburua = $row['IZENBURUA'];
+						$idazle = $row['IDAZLEA'];
+						$isbn = $row['ISBN'];
 						echo 
-							"<tr>
-								<td> ".$lerro." </td>
-								<td>{$row['IZENBURUA']}</td> 
-								<td>{$row['IDAZLEA']}</td>
-								<td><button onclick='editatu({$row['ISBN']})'><img src=../../irudiak/lapiz.png width=30></button></td>
-								<td><button onclick='ezabatu()'><img src=../../irudiak/papelera.png width=30></button></td>
-							</tr>";
+							'<tr>
+								<td>'.$lerro.'</td>
+								<td>'.$izenburua.'</td> 
+								<td>'.$idazle.'</td>
+								<td><button onclick="editatu('.$isbn.')"><img src=../../irudiak/lapiz.png width=30></button></td>
+								<td><button onclick="ezabatu()"><img src=../../irudiak/papelera.png width=30></button></td>
+							</tr>';
 					}
 					echo "<script type='text/javascript' src='../../js/liburu_zerrenda.js'></script>";
 					mysqli_close($conn);

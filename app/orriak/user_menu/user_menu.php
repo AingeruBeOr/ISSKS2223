@@ -10,8 +10,8 @@
             <div class="botoi_panel">
                 <button>Nire datuak aldatu</button>
                 <button><a href="./liburu_zerrenda.php">Liburuen zerrenda ikusi</button>
-                <button><a href="./liburu_gehitu.html">Liburua gehitu</a></button>
-                <button><a href="../../index.html">Atera</a></button>
+                <button><a href="./liburu_gehitu.php">Liburua gehitu</a></button>
+                <button><a href="../../index.php">Atera</a></button>
             </div>
         </div>
         <!-- <a href="datuen_aldaketa.html">Nire datuak aldatu</a> -->

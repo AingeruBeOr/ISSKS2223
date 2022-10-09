@@ -1,17 +1,5 @@
 <?php 
-
-	//datu basearen konexioa ahalbidetzen dituzten aldagaiak:
-    $hostname = "db";
-    $username = "admin";
-    $password = "test";
-    $db = "database";
-
-
-    //DB-arekin konexioa:
-	$conn = mysqli_connect($hostname,$username,$password,$db);
-  	if ($conn->connect_error) {
-    	die("Database connection failed: " . $conn->connect_error);
-  	}
+	include '../../config_php/db_link.php';
 
     $ISBN = $_GET['isbn'];
 
@@ -35,7 +23,7 @@
 		<main>
 			<div class="login-page">
 				<div class="form">
-					<form class="resgister-form" id="formulario" method="post" action="../../php/liburua_editatu.php">
+					<form class="resgister-form" id="formulario" method="post" action="../../config_php/liburua_editatu.php">
                         <div class="formulario__grupo" id="grupo__pasahitza">
                             ISBN (ezin da aldatu): <input type= "text" name="ISBN" value="<?php echo $ISBN ?>" readonly>
                         </div>

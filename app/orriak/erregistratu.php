@@ -33,7 +33,7 @@
 						</div>
 							
 						<button type="submit" name="erregistratu">Erregistratu</button>
-						<p class="message">Jadanik erregistratuta? <a href="../index.html">Identifikatu</a></p>       
+						<p class="message">Jadanik erregistratuta? <a href="../index.php">Identifikatu</a></p>       
 					</form>
 				</div>
 			</div>
