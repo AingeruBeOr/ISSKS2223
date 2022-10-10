@@ -27,22 +27,22 @@
 							Izen Abizenak (erabiltzailea): <input type="text" name="Izena" placeholder="Zure erabiltzailea sartu" required>
 						</div>
 						<div class="formulario__grupo" id="grupo__nan">
-							NAN: <input type="text" name="NAN" placeholder="11111111-Z" required>
+							NAN: <input type="text" id="NAN" name="NAN" placeholder="11111111-Z" required>
 						</div>
 						<div class="formulario__grupo" id="grupo__telefonoa">
-							Telefonoa: <input type="text" name="Telefonoa" placeholder="123456789" required>
+							Telefonoa: <input type="text" id="Telefonoa" name="Telefonoa" placeholder="123456789" required>
 						</div>
 						<div class="formulario__grupo" id="grupo__jaiotzedata">
-							Jaiotze data: <input type="date" name="Jaiotze_data" required>
+							Jaiotze data: <input type="date" id="Jaiotze_data" name="Jaiotze_data" required>
 						</div>
 						<div class="formulario__grupo" id="grupo__email">
-							Email: <input type="email" name="email" placeholder="adibidea@enpresa.luzapen" required>
+							Email: <input type="email" id="email" name="email" placeholder="adibidea@enpresa.luzapen" required>
 						</div>
 						<div class="formulario__grupo" id="grupo__pasahitza">
-							Pasahitza: <input type= "password" name="Pasahitza" placeholder="Sartu zure pasahitza" required>
+							Pasahitza: <input type= "password" id="Pasahitza" name="Pasahitza" placeholder="Sartu zure pasahitza" required>
 						</div>
 						<div class="formulario__grupo" id="grupo__pasahitza2">
-							Konfirmazioa: <input type="password" name="Konfirmazioa" placeholder="Sartu zure pasahitza berriz ere" required>
+							Konfirmazioa: <input type="password" id="Konfirmazioa" name="Konfirmazioa" placeholder="Sartu zure pasahitza berriz ere" required>
 						</div>
 							
 						<button type="submit" name="erregistratu">Erregistratu</button>
