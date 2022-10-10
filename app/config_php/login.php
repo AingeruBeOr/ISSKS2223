@@ -1,7 +1,8 @@
 <?php
     include 'db_link.php';
 
-    // session_start(); //TODO
+    //sesio berri bat sortzen da:
+    session_start();
 
     //index.html orritik "POST" bidez lortu ditugun aldagaik:
     $erabiltzaile = $_POST["erabiltzailea"];
@@ -12,6 +13,7 @@
 
     if($num_rows >= 1){
         //erabiltzailea eta pasahitza ondo sartu badira, "user_menu.html" orrira joango gara.
+        $_SESSION['username'] = $erabiltzaile;
         header("Location: ../orriak/user_menu/user_menu.php"); 
     }
     else{

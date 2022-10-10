@@ -1,3 +1,16 @@
+<?php
+
+    session_start();
+
+    $erabiltzaile = $_SESSION['username'];
+
+    //saioa irekita badago, ez zaie utziko erregistratu.php orrira sartzea
+    if(isset($erabiltzaile)){
+        header("location: user_menu/user_menu.php");
+    }
+   
+?>
+
 <!DOCTYPE html>
 <html>
     <head>

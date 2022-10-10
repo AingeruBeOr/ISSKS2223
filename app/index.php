@@ -1,6 +1,18 @@
 <?php
+
+    session_start();
+
+    $erabiltzaile = $_SESSION['username'];
+
+    //saioa irekita badago, ez zaie utziko index.php orrira sartzea
+    if(isset($erabiltzaile)){
+        header("location: orriak/user_menu/user_menu.php");
+    }
+    
     if(empty($_GET['txarto'])) $error = 0;
     else $error = 1;
+
+    
 ?>
 
 <!DOCTYPE html>

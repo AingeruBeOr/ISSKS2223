@@ -1,15 +1,17 @@
 <?php 
 	include '../../config_php/db_link.php';
 
-    $ISBN = $_GET['isbn'];
+	session_start();
 
-    $query = mysqli_query($conn, "SELECT * FROM liburua WHERE ISBN = '$ISBN'") or die (mysqli_error($conn));
+	$erabiltzaile = $_SESSION['username'];
+
+    $query = mysqli_query($conn, "SELECT * FROM usuarios WHERE izen_abizenak = '$erabiltzaile'") or die (mysqli_error($conn));
     $row = mysqli_fetch_array($query);
-    $IZENBURUA = $row['IZENBURUA']; 
-    $IDAZLEA = $row['IDAZLEA'];
-    $ARGITALPEN_DAT = $row['ARGITALPENDATA'];
-    $ORRI_KOP = $row['ORRIALDEKOP'];
-    $ARGITALTXE = $row['ARGITALETXEA'];
+    $DNI = $row['DNI'];
+    $IZEN_ABIZENAK = $row['Izen_Abizenak']; 
+    $TELEFONOA = $row['Telefonoa'];
+    $JAIOTZE_DATA = $row['Jaiotze_Data'];
+    $EMAIL = $row['Email'];
 ?>
 
 <!DOCTYPE html>
@@ -23,31 +25,23 @@
         <main>
 			<div class="login-page">
 				<div class="form">
-					<form class="resgister-form" id="formulario" method="post" action="../php/erregistratu.php">
-						<div class="formulario__grupo" id="grupo__izena"> 
-							Izen Abizenak (erabiltzailea): <input type="text" name="Izena" placeholder="Zure erabiltzailea sartu" required>
-						</div>
+					<form class="resgister-form" id="formulario" method="post" action="../../config_php/datuak_aldatu.php">
 						<div class="formulario__grupo" id="grupo__nan">
-							NAN: <input type="text" name="NAN" placeholder="11111111-Z" required>
+							NAN (ezin da aldatu): <input type="text" name="NAN" value="<?php echo $DNI ?>" readonly>
+						</div>
+						<div class="formulario__grupo" id="grupo__izena"> 
+							Izen Abizenak (erabiltzailea): <input type="text" name="Izena" value="<?php echo $IZEN_ABIZENAK ?>" required>
 						</div>
 						<div class="formulario__grupo" id="grupo__telefonoa">
-							Telefonoa: <input type="text" name="Telefonoa" placeholder="123456789" required>
+							Telefonoa: <input type="text" name="Telefonoa" value="<?php echo $TELEFONOA ?>" required>
 						</div>
 						<div class="formulario__grupo" id="grupo__jaiotzedata">
-							Jaiotze data: <input type="date" name="Jaiotze_data" required>
+							Jaiotze data: <input type="date" name="Jaiotze_data" value="<?php echo $JAIOTZE_DATA ?>" required>
 						</div>
 						<div class="formulario__grupo" id="grupo__email">
-							Email: <input type="email" name="email" placeholder="adibidea@enpresa.luzapen" required>
+							Email: <input type="email" name="email" value="<?php echo $EMAIL ?>" required>
 						</div>
-						<div class="formulario__grupo" id="grupo__pasahitza">
-							Pasahitza: <input type= "password" name="Pasahitza" placeholder="Sartu zure pasahitza" required>
-						</div>
-						<div class="formulario__grupo" id="grupo__pasahitza2">
-							Konfirmazioa: <input type="password" name="Konfirmazioa" placeholder="Sartu zure pasahitza berriz ere" required>
-						</div>
-							
-						<button type="submit" name="erregistratu">Erregistratu</button>
-						<p class="message">Jadanik erregistratuta? <a href="../index.php">Identifikatu</a></p>       
+						<button type="submit" name="erregistratu">DATUAK ALDATU</button>      
 					</form>
 				</div>
 			</div>
