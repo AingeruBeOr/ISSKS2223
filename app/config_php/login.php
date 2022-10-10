@@ -15,7 +15,7 @@
         header("Location: ../orriak/user_menu/user_menu.php"); 
     }
     else{
-        header("Location: ../index.php"); 
+        header("Location: ../index.php?txarto=1"); 
     }
 
     mysqli_close($conn);

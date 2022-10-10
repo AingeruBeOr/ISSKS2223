@@ -1,9 +1,9 @@
 <?php 
 	include '../../config_php/db_link.php';
 
-    $ISBN = $_GET['isbn'];
+    $ISBN = $_GET['isbn']; //TODO
 
-    $query = mysqli_query($conn, "SELECT ISBN, IZENBURUA, IDAZLEA, ARGITALPENDATA, ORRIALDEKOP, ARGITALETXEA FROM liburua WHERE ISBN = '$ISBN'") or die (mysqli_error($conn));
+    $query = mysqli_query($conn, "SELECT * FROM usuarios WHERE NAN = '$ISBN'") or die (mysqli_error($conn));
     $row = mysqli_fetch_array($query);
     $IZENBURUA = $row['IZENBURUA']; 
     $IDAZLEA = $row['IDAZLEA'];

@@ -15,8 +15,8 @@
 			<table border="1">
 				<tr>
 					<th></th>
-					<th style="font-family: Arial; font-size: 20px;">Izenburua</th>
-					<th style="font-family: Arial; font-size: 20px">Idazlea</th>	
+					<th>Izenburua</th>
+					<th>Idazlea</th>	
 				</tr>
 
 				<?php 

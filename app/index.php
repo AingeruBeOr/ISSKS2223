@@ -1,3 +1,8 @@
+<?php
+    if(empty($_GET['txarto'])) $error = 0;
+    else $error = 1;
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,6 +18,9 @@
                     PASAHITZA: <input type="password" name="pasahitza" placeholder="Zure pasahitza sartu" required><br>
                     <button>Sartu</button>
                     <p class="message">Ez zaude erregistratuta? <a href="orriak/erregistratu.php">Erregistratu</a></p>
+                    <?php 
+                        if($error == 1) echo "<p class='error_message'>Ez da erabiltzailerik ezagutzen izen eta pasahitza horrekin.</p>" 
+                    ?> 
                 </form> 
             </div>
         </div>

@@ -3,6 +3,11 @@ table{
     background-color: white;
 }
 
+table th{
+    font-family: Arial;
+    font-size: 20px;
+}
+
 .laukia {
     position: relative;
     z-index: 1;
