@@ -1,3 +1,9 @@
+<?php 
+
+    session_start();
+
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -6,6 +12,7 @@
         <link rel="stylesheet" type="text/css" href="../../estiloak/index.css">
     </head>
     <body>
+        <?php include '../../templates/header.php'; ?>
         <main>
             <div class="login-page">
                 <div class="form">

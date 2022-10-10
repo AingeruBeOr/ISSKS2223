@@ -14,7 +14,7 @@
                VALUES ('$NAN','$Izena', '$Telefonoa' ,'$Jaiotze_data','$email','$Pasahitza')" ;
     $query = mysqli_query($conn, $insert) or die (mysqli_error($conn));
 
-    header("Location: ../orriak/user_menu/user_menu.html"); //erabiltzailea eta pasahitza ondo sartu badira, "user_menu.html" orrira joango gara.
+    header("Location: ../orriak/user_menu/user_menu.php"); //erabiltzailea eta pasahitza ondo sartu badira, "user_menu.html" orrira joango gara.
     
     mysqli_close($conn);
 ?>

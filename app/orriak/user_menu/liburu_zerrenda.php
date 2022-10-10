@@ -1,4 +1,9 @@
-<?php include '../../config_php/db_link.php'; ?>
+<?php 
+
+	include '../../config_php/db_link.php'; 
+	session_start();
+
+?>
 
 <!DOCTYPE html>
 <html>
@@ -9,7 +14,7 @@
         <!-- <link rel="stylesheet" type="text/css" href="../../estiloak/index.css"> -->
 	</head>
 	<body>
-
+		<?php include("../../templates/header.php"); ?>
 		<br>
 		<div class="laukia">
 			<table border="1">

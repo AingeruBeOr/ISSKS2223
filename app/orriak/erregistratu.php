@@ -22,7 +22,7 @@
 		<main>
 			<div class="login-page">
 				<div class="form">
-					<form class="resgister-form" id="formulario" method="post" action="../php/erregistratu.php">
+					<form class="resgister-form" id="formulario" method="post" action="../config_php/erregistratu.php">
 						<div class="formulario__grupo" id="grupo__izena"> 
 							Izen Abizenak (erabiltzailea): <input type="text" name="Izena" placeholder="Zure erabiltzailea sartu" required>
 						</div>

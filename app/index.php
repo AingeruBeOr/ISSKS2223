@@ -22,7 +22,8 @@
         <link rel="stylesheet" type="text/css" href="estiloak/general.css">
         <link rel="stylesheet" type="text/css" href="estiloak/index.css">
     </head>
-    <body> 
+
+    <body>
         <div class="login-page">
             <div class="form">
                 <form class="login-form" method="post" action="config_php/login.php">

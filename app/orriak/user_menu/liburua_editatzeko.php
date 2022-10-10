@@ -1,9 +1,11 @@
 <?php 
 	include '../../config_php/db_link.php';
+	session_start();
 
-    $ISBN = $_GET['isbn']; //TODO
 
-    $query = mysqli_query($conn, "SELECT * FROM usuarios WHERE NAN = '$ISBN'") or die (mysqli_error($conn));
+    $ISBN = $_GET['isbn'];
+
+    $query = mysqli_query($conn, "SELECT * FROM liburua WHERE ISBN = '$ISBN'") or die (mysqli_error($conn));
     $row = mysqli_fetch_array($query);
     $IZENBURUA = $row['IZENBURUA']; 
     $IDAZLEA = $row['IDAZLEA'];
@@ -20,6 +22,7 @@
         <link rel="stylesheet" type="text/css" href="../../estiloak/index.css">
     </head>
     <body>
+		<?php include '../../templates/header.php'; ?>
 		<main>
 			<div class="login-page">
 				<div class="form">

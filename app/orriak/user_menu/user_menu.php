@@ -19,6 +19,7 @@
         <link rel="stylesheet" type="text/css" href="../../estiloak/user_menu/user_menu.css">
     </head>
     <body>
+        <?php include '../../templates/header.php'; ?>
         <div class="menua">
             <div class="botoi_panel">
                 <button><a href="./datuen_aldaketa.php">Nire datuak aldatu</a></button>
