@@ -24,7 +24,7 @@
 				<div class="form">
 					<form class="resgister-form" id="formulario" method="post" action="../config_php/erregistratu.php">
 						<div class="formulario__grupo" id="grupo__izena"> 
-							Izen Abizenak (erabiltzailea): <input type="text" name="Izena" placeholder="Zure erabiltzailea sartu" required>
+							Izen Abizenak (erabiltzailea): <input type="text" id="Izena" name="Izena" placeholder="Zure erabiltzailea sartu" required>
 						</div>
 						<div class="formulario__grupo" id="grupo__nan">
 							NAN: <input type="text" id="NAN" name="NAN" placeholder="11111111-Z" required>
@@ -46,7 +46,8 @@
 						</div>
 							
 						<button type="submit" name="erregistratu">Erregistratu</button>
-						<p class="message">Jadanik erregistratuta? <a href="../index.php">Identifikatu</a></p>       
+						<p class="message">Jadanik erregistratuta? <a href="../index.php">Identifikatu</a></p>
+						<p id="erroreak" class="error_message"></p>       
 					</form>
 				</div>
 			</div>

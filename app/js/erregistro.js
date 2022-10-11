@@ -8,18 +8,36 @@ document.addEventListener("DOMContentLoaded", function(){
 const expresiones = {
 	izena: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
 	email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-	telefonoa: /^\d{7,14}$/ // 7 a 14 numeros.
+	telefonoa: /^[0-9]{1,9}$/
 }
 
 function formularioaBalioztatu(evento){
 	evento.preventDefault();
 	var nan = document.getElementById('NAN').value;
 	if(nanBalioztatu(nan)==1){
-		alert('nan');
+		document.getElementById("erroreak").innerHTML="NAN txarto";
 		return;
 	}
-	if(expresiones.test){
-
+	var iz = document.getElementById('Izena').value;
+	if(!expresiones.izena.test(iz.value)){
+		document.getElementById("erroreak").innerHTML="Izena txarto";
+		return;
+	}
+	var tel = document.getElementById('Telefonoa').value;
+	if(!expresiones.telefonoa.test(tel.value)){
+		document.getElementById("erroreak").innerHTML="Telefonoa txarto";
+		return;
+	}
+	var ema = document.getElementById('email').value;
+	if(!expresiones.email.test(ema.value)){
+		document.getElementById("erroreak").innerHTML="email txarto";
+		return;
+	}
+	var p1=document.getElementById('Pasahitza').value;
+	var p2=document.getElementById('Konfirmazioa').value;
+	if(p1!=p2){
+		document.getElementById("erroreak").innerHTML="Pasahitza txarto";
+		return;
 	}
 
 }
@@ -33,7 +51,7 @@ function nanBalioztatu(dni) {
 	zenb = dni.substr(0,dni.length-2);
 	h = dni.substr(dni.length-1,1);
 	marra= dni.substr(dni.length-2, dni.length-1);
-	zenb = numero % 23;
+	zenb = zenb % 23;
 
 	hizki='TRWAGMYFPDXBNJZSQVHLCKET';
 	hizki=hizki.substring(zenb,zenb+1);
