@@ -1,7 +1,8 @@
 //https://desarrolloweb.com/articulos/1767.php
 
 const expresiones = {
-	nan: /[0-9]{8}\-[A-Z]/,
+	nan: /^[0-9]{8}\-[A-Z]$/,
+	data: /^[0-9]{4}\-[0-9]{2}\-[0-9]{2}$/,
 	izena: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
 	email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$/,
 	telefonoa: /^[0-9]{9}$/
@@ -19,6 +20,7 @@ const telefonoa=document.getElementById('Telefonoa');
 const email=document.getElementById('email');
 const p1=document.getElementById('Pasahitza');
 const p2=document.getElementById('Konfirmazioa');
+const data=document.getElementById('Jaiotze_data');
 
 function formularioaBalioztatu(evento){
 	evento.preventDefault();
@@ -27,9 +29,14 @@ function formularioaBalioztatu(evento){
 		document.getElementById("erroreak").innerHTML="NAN txarto";
 		return;
 	}
-	console.log("Control 1")
+	console.log("Control 0")
 	if(!expresiones.izena.test(izena.value)){
 		document.getElementById("erroreak").innerHTML="Izena txarto";
+		return;
+	}
+	console.log("Control 1")
+	if(!expresiones.data.test(data.value)){
+		document.getElementById("erroreak").innerHTML="Data txarto";
 		return;
 	}
 	console.log("Control 2")
