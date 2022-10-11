@@ -17,6 +17,8 @@
     $TELEFONOA = $row['Telefonoa'];
     $JAIOTZE_DATA = $row['Jaiotze_Data'];
     $EMAIL = $row['Email'];
+
+	$PASAHITZA = $row['Pasahitza'];
 ?>
 
 <!DOCTYPE html>
@@ -36,23 +38,29 @@
 							NAN (ezin da aldatu): <input type="text" name="NAN" value="<?php echo $DNI ?>" readonly>
 						</div>
 						<div class="formulario__grupo" id="grupo__izena"> 
-							Izen Abizenak (erabiltzailea): <input type="text" name="Izena" value="<?php echo $IZEN_ABIZENAK ?>" required>
+							Izen Abizenak (erabiltzailea): <input type="text" id="Izena" name="Izena" value="<?php echo $IZEN_ABIZENAK ?>" required>
 						</div>
 						<div class="formulario__grupo" id="grupo__telefonoa">
-							Telefonoa: <input type="text" name="Telefonoa" value="<?php echo $TELEFONOA ?>" required>
+							Telefonoa: <input type="text" id="Telefonoa" name="Telefonoa" value="<?php echo $TELEFONOA ?>" required>
 						</div>
 						<div class="formulario__grupo" id="grupo__jaiotzedata">
-							Jaiotze data: <input type="date" name="Jaiotze_data" value="<?php echo $JAIOTZE_DATA ?>" required>
+							Jaiotze data: <input type="date" id="Jaiotze_data" name="Jaiotze_data" value="<?php echo $JAIOTZE_DATA ?>" required>
 						</div>
 						<div class="formulario__grupo" id="grupo__email">
-							Email: <input type="email" name="email" value="<?php echo $EMAIL ?>" required>
+							Email: <input type="email" id="email" name="email" value="<?php echo $EMAIL ?>" required>
 						</div>
-						<button type="submit" name="erregistratu">DATUAK ALDATU</button>      
+						<div class="formulario__grupo" id="grupo__email">
+							Pasahitza berria: <input type="password" id="pasahitza" name="pasahitza">
+						</div>
+						<div class="formulario__grupo" id="grupo__email">
+							Konfirmazioa: <input type="password" id="pasahitza2" name="pasahitza2">
+						</div>
+						<button type="submit" name="erregistratu">DATUAK ALDATU</button>   
+						<p id="erroreak" class="error_message"></p>   
 					</form>
 				</div>
 			</div>
-			<script src="../js/erregistro.js"></script>
-			<!--<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script> ESTO NO SE Q ES EXACTAMENTE-->
+			<script src="../../js/datuen_aldaketa.js"></script>
 		</main>
     </body>
 </html>

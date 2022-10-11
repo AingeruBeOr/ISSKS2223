@@ -55,7 +55,6 @@
 				</div>
 			</div>
 			<script src="../js/erregistro.js"></script>
-			<!--<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script> ESTO NO SE Q ES EXACTAMENTE-->
 		</main>
     </body>
 </html>

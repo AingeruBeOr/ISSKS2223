@@ -37,25 +37,27 @@
                             ISBN (ezin da aldatu): <input type= "text" name="ISBN" value="<?php echo $ISBN ?>" readonly>
                         </div>
 						<div class="formulario__grupo" id="grupo__izena"> 
-							IZENBURUA <input type="text" name="Izenburua" value="<?php echo $IZENBURUA ?>" required>
+							IZENBURUA <input type="text" id="izenburua" name="Izenburua" value="<?php echo $IZENBURUA ?>" required>
 						</div>
 						<div class="formulario__grupo" id="grupo__nan">
-							IDAZLEA: <input type="text" name="Idazlea" value="<?php echo $IDAZLEA ?>" required>
+							IDAZLEA: <input type="text" id="idazlea" name="Idazlea" value="<?php echo $IDAZLEA ?>" required>
 						</div>
 						<div class="formulario__grupo" id="grupo__telefonoa">
-							ARGITALPEN DATA: <input type="date" name="Argitalpen_dat" value="<?php echo $ARGITALPEN_DAT ?>" required>
+							ARGITALPEN DATA: <input type="date" id="ArgitalpenData" name="Argitalpen_dat" value="<?php echo $ARGITALPEN_DAT ?>" required>
 						</div>
 						<div class="formulario__grupo" id="grupo__jaiotzedata">
-							ORRIALDE KOPURUA: <input type="text" name="Orri_kop" value="<?php echo $ORRI_KOP ?>" required>
+							ORRIALDE KOPURUA: <input type="text" id="OrrialdeKop" name="Orri_kop" value="<?php echo $ORRI_KOP ?>" required>
 						</div>
 						<div class="formulario__grupo" id="grupo__email">
-							ARGITALETXEA: <input type="text" name="Argitaletxe" value="<?php echo $ARGITALTXE ?>" required>
+							ARGITALETXEA: <input type="text" id="argitaletxea" name="Argitaletxe" value="<?php echo $ARGITALTXE ?>" required>
 						</div>
 							
-						<button name="erregistratu">Aldatu</button>      
+						<button name="erregistratu">Aldatu</button> 
+						<p id="erroreak" class="error_message"></p>     
 					</form>
 				</div>
 			</div>
+			<script src="../../js/liburua_editatzeko.js"></script>
 		</main>
     </body>
 </html>
