@@ -5,6 +5,11 @@
 
 	$erabiltzaile = $_SESSION['username'];
 
+    //saioa ez badago irekita, ez zaie utziko user_menu.php orrira sartzea
+    if(!isset($erabiltzaile)){
+        header("location: ../../index.php");
+    }
+
     $query = mysqli_query($conn, "SELECT * FROM usuarios WHERE izen_abizenak = '$erabiltzaile'") or die (mysqli_error($conn));
     $row = mysqli_fetch_array($query);
     $DNI = $row['DNI'];

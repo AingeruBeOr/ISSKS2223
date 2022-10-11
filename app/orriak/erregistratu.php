@@ -8,6 +8,9 @@
     if(isset($erabiltzaile)){
         header("location: user_menu/user_menu.php");
     }
+
+	if(empty($_GET['keyerror'])) $error = 0;
+    else $error = 1;
    
 ?>
 
@@ -36,7 +39,7 @@
 							Jaiotze data: <input type="date" id="Jaiotze_data" name="Jaiotze_data" required>
 						</div>
 						<div class="formulario__grupo" id="grupo__email">
-							Email: <input type="email" id="email" name="email" placeholder="adibidea@enpresa.luzapen" required>
+							Email: <input type="email" id="email" name="email" placeholder="adibidea@zerbitzaria.luzapen" required>
 						</div>
 						<div class="formulario__grupo" id="grupo__pasahitza">
 							Pasahitza: <input type= "password" id="Pasahitza" name="Pasahitza" placeholder="Sartu zure pasahitza" required>
@@ -47,7 +50,7 @@
 							
 						<button type="submit" name="erregistratu">Erregistratu</button>
 						<p class="message">Jadanik erregistratuta? <a href="../index.php">Identifikatu</a></p>
-						<p id="erroreak" class="error_message"></p>       
+						<p id="erroreak" class="error_message"><?php if($error==1) echo "Jadanik exisititzen da erabiltzaile bat NAN horrekin." ?></p>       
 					</form>
 				</div>
 			</div>

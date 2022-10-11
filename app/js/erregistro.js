@@ -8,12 +8,11 @@ const expresiones = {
 	telefonoa: /^[0-9]{9}$/
 }
 
-const texto_error="Erroreren bat dago sartutako datuetan. Hurrengo formatua erabili behar da: · Izen Abizenak: Testua soilik · NAN: 12345678-X · Telefonoa: 9 digitu";
-
 document.addEventListener("DOMContentLoaded", function(){
 	document.getElementById("formulario").addEventListener('submit', formularioaBalioztatu);
 });
 
+// HTML orriaren elementuak:
 const izena=document.getElementById('Izena');
 const nan=document.getElementById('NAN');
 const telefonoa=document.getElementById('Telefonoa');
@@ -21,37 +20,58 @@ const email=document.getElementById('email');
 const p1=document.getElementById('Pasahitza');
 const p2=document.getElementById('Konfirmazioa');
 const data=document.getElementById('Jaiotze_data');
+const errore_mezu=document.getElementById('erroreak');
 
+/**
+ * 
+ * @param {*} evento 
+ * @returns 
+ */
 function formularioaBalioztatu(evento){
+	nan.style.border = "none";
+	izena.style.border = "none";
+	telefonoa.style.border = "none";
+	email.style.border = "none";
+	p1.style.border = "none";
+	p2.style.border = "none";
+	data.style.border = "none";
+
 	evento.preventDefault();
 
 	if(nanBalioztatu(nan.value)==1){
-		document.getElementById("erroreak").innerHTML="NAN txarto";
+		errore_mezu.innerHTML="NAN-aren formatua txarto. Hurrengo formatua izan behar du: 11111111-Z ";
+		nan.style.border = "2px solid red";
 		return;
 	}
 	console.log("Control 0")
 	if(!expresiones.izena.test(izena.value)){
-		document.getElementById("erroreak").innerHTML="Izena txarto";
+		errore_mezu.innerHTML="Izena Abizenak txarto. Bakarrik testua idatz daiteke";
+		izena.style.border = "2px solid red";
 		return;
 	}
 	console.log("Control 1")
 	if(!expresiones.data.test(data.value)){
-		document.getElementById("erroreak").innerHTML="Data txarto";
+		errore_mezu.innerHTML="Data txarto. Hurrengo formatua izan behar du: dd-mm-aaaa";
+		data.style.border = "2px solid red";
 		return;
 	}
 	console.log("Control 2")
 	if(!expresiones.telefonoa.test(telefonoa.value)){
-		document.getElementById("erroreak").innerHTML="Telefonoa txarto";
+		errore_mezu.innerHTML="Telefonoa txarto. 9 zenbaki bakarrik adieraz ditzakezu";
+		telefonoa.style.border = "2px solid red";
 		return;
 	}
 	console.log("Control 3")
 	if(!expresiones.email.test(email.value)){
-		document.getElementById("erroreak").innerHTML="email txarto";
+		errore_mezu.innerHTML="email txarto";
+		email.style.border = "2px solid red";
 		return;
 	}
 	console.log("Control 4")
 	if(p1.value!=p2.value){
-		document.getElementById("erroreak").innerHTML="Pasahitza txarto";
+		errore_mezu.innerHTML="Pasahitzek ez dute bat egiten.";
+		p1.style.border = "2px solid red";
+		p2.style.border = "2px solid red";
 		return;
 	}
 	console.log("Control 5")

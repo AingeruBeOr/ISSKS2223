@@ -2,6 +2,13 @@
 
     session_start();
 
+    $erabiltzaile = $_SESSION['username'];
+
+    //saioa ez badago irekita, ez zaie utziko user_menu.php orrira sartzea
+    if(!isset($erabiltzaile)){
+        header("location: ../../index.php");
+    }
+
 ?>
 
 <!DOCTYPE html>
