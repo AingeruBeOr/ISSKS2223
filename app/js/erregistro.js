@@ -1,6 +1,7 @@
 //https://desarrolloweb.com/articulos/1767.php
 
 const expresiones = {
+	nan: /[0-9]{8}\-[A-Z]/,
 	izena: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
 	email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$/,
 	telefonoa: /^[0-9]{9}$/
@@ -55,18 +56,20 @@ function nanBalioztatu(dni) {
 	var zenb
 	var h
 	var hizki
-	var marra
   
-	zenb = dni.substr(0,dni.length-2);
-	h = dni.substr(dni.length-1,1);
-	marra= dni.substr(dni.length-2, dni.length-1);
-	zenb = zenb % 23;
-
-	hizki='TRWAGMYFPDXBNJZSQVHLCKET';
-	hizki=hizki.substring(zenb,zenb+1);
-	if (hizki!=h.toUpperCase()) {
-		return 1;
+	if(expresiones.nan.test(dni)){
+		zenb = dni.substr(0,dni.length-2);
+		h = dni.substr(dni.length-1,1);
+		zenb = zenb % 23;
+	
+		hizki='TRWAGMYFPDXBNJZSQVHLCKET';
+		hizki=hizki.substring(zenb,zenb+1);
+		if (hizki!=h.toUpperCase()) {
+			return 1;
+		}else{
+			return 0;
+		}
 	}else{
-		return 0;
+		return 1;
 	}
   }
