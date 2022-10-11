@@ -5,12 +5,21 @@ document.addEventListener("DOMContentLoaded", function(){
 	document.getElementById("formulario").addEventListener('submit', formularioaBalioztatu);
 });
 
+const expresiones = {
+	izena: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
+	email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+	telefonoa: /^\d{7,14}$/ // 7 a 14 numeros.
+}
+
 function formularioaBalioztatu(evento){
 	evento.preventDefault();
 	var nan = document.getElementById('NAN').value;
 	if(nanBalioztatu(nan)==1){
 		alert('nan');
 		return;
+	}
+	if(expresiones.test){
+
 	}
 
 }
