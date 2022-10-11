@@ -2,8 +2,8 @@
 
 const expresiones = {
 	izena: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-	email: /[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$/,
-	telefonoa: /[0-9]{1,9}$/
+	email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$/,
+	telefonoa: /^[0-9]{9}$/
 }
 
 const texto_error="Erroreren bat dago sartutako datuetan. Hurrengo formatua erabili behar da: · Izen Abizenak: Testua soilik · NAN: 12345678-X · Telefonoa: 9 digitu";
@@ -12,35 +12,42 @@ document.addEventListener("DOMContentLoaded", function(){
 	document.getElementById("formulario").addEventListener('submit', formularioaBalioztatu);
 });
 
+const izena=document.getElementById('Izena');
+const nan=document.getElementById('NAN');
+const telefonoa=document.getElementById('Telefonoa');
+const email=document.getElementById('email');
+const p1=document.getElementById('Pasahitza');
+const p2=document.getElementById('Konfirmazioa');
 
 function formularioaBalioztatu(evento){
 	evento.preventDefault();
-	var nan = document.getElementById('NAN').value;
-	if(nanBalioztatu(nan)==1){
+
+	if(nanBalioztatu(nan.value)==1){
 		document.getElementById("erroreak").innerHTML="NAN txarto";
 		return;
 	}
-	var iz = document.getElementById('Izena').value;
-	if(!expresiones.izena.test(iz)){
+	console.log("Control 1")
+	if(!expresiones.izena.test(izena.value)){
 		document.getElementById("erroreak").innerHTML="Izena txarto";
 		return;
 	}
-	var tel = document.getElementById('Telefonoa').value;
-	if(!expresiones.telefonoa.test(tel)){
+	console.log("Control 2")
+	if(!expresiones.telefonoa.test(telefonoa.value)){
 		document.getElementById("erroreak").innerHTML="Telefonoa txarto";
 		return;
 	}
-	var ema = document.getElementById('email').value;
-	if(!expresiones.email.test(ema)){
+	console.log("Control 3")
+	if(!expresiones.email.test(email.value)){
 		document.getElementById("erroreak").innerHTML="email txarto";
 		return;
 	}
-	var p1=document.getElementById('Pasahitza').value;
-	var p2=document.getElementById('Konfirmazioa').value;
-	if(p1!=p2){
+	console.log("Control 4")
+	if(p1.value!=p2.value){
 		document.getElementById("erroreak").innerHTML="Pasahitza txarto";
 		return;
 	}
+	console.log("Control 5")
+	this.submit();
 
 }
 
