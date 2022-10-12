@@ -9,6 +9,9 @@
         header("location: ../../index.php");
     }
 
+    if(empty($_GET['keyerror'])) $error = 0;
+    else $error = 1;
+
 ?>
 
 <!DOCTYPE html>
