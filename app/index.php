@@ -1,32 +1,42 @@
 <?php
-  echo '<h1>Yeah, it works!<h1>';
-  // phpinfo();
-  $hostname = "db";
-  $username = "admin";
-  $password = "test";
-  $db = "database";
 
-  $conn = mysqli_connect($hostname,$username,$password,$db);
-  if ($conn->connect_error) {
-    die("Database connection failed: " . $conn->connect_error);
-  }
+    session_start();
 
+    $erabiltzaile = $_SESSION['username'];
 
+    //saioa irekita badago, ez zaie utziko index.php orrira sartzea
+    if(isset($erabiltzaile)){
+        header("location: orriak/user_menu/user_menu.php");
+    }
+    
+    if(empty($_GET['txarto'])) $error = 0;
+    else $error = 1;
 
-$query = mysqli_query($conn, "SELECT * FROM usuarios")
-   or die (mysqli_error($conn));
-
-while ($row = mysqli_fetch_array($query)) {
-  echo
-   "<tr>
-    <td>{$row['DNI']}</td> 
-    <td>{$row['Izen Abizenak']}</td>
-    <td>{$row['Telefonoa']}</td>
-    <td>{$row['Jaiotze Data']}</td>
-    <td>{$row['Email']}</td>
-   </tr><br>";
-   
-
-}
-
+    
 ?>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Web Sistema</title>
+        <link rel="stylesheet" type="text/css" href="estiloak/general.css">
+        <link rel="stylesheet" type="text/css" href="estiloak/index.css">
+    </head>
+
+    <body>
+        <div class="login-page">
+            <div class="form">
+                <form class="login-form" method="post" action="config_php/login.php">
+                    ERABILTZAILEA: <input type="text" name="erabiltzailea" placeholder="Zura erabiltzailea sartu" required><br>
+                    PASAHITZA: <input type="password" name="pasahitza" placeholder="Zure pasahitza sartu" required><br>
+                    <button>Sartu</button>
+                    <p class="message">Ez zaude erregistratuta? <a href="orriak/erregistratu.php">Erregistratu</a></p>
+                    <?php 
+                        if($error == 1) echo "<p class='error_message'>Ez da erabiltzailerik ezagutzen izen eta pasahitza horrekin.</p>" 
+                    ?> 
+                </form> 
+            </div>
+        </div>
+    </body>
+    
+</html>
