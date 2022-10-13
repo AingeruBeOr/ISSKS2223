@@ -53,6 +53,7 @@
 					mysqli_close($conn);
 				?>				
 			</table>
+			<button class="home_button"><a href="user_menu.php"><img src="../../irudiak/home.png" width="30px"></a></button>    
 		</div>
 	</body>
 </html>

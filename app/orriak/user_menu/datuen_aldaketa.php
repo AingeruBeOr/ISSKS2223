@@ -27,7 +27,7 @@
         <title>Web Sistema</title>
         <link rel="stylesheet" type="text/css" href="../../estiloak/general.css">
         <link rel="stylesheet" type="text/css" href="../../estiloak/index.css">
-		<link rel="shortcut icon" href="irudiak/book.png" />
+		<link rel="shortcut icon" href="../../irudiak/book.png" />
     </head>
     <body>
 		<?php include '../../templates/header.php'; ?>
@@ -56,7 +56,8 @@
 						<div class="formulario__grupo" id="grupo__email">
 							Konfirmazioa: <input type="password" id="pasahitza2" name="pasahitza2">
 						</div>
-						<button type="submit" name="erregistratu">DATUAK ALDATU</button>   
+						<button type="submit" name="erregistratu">DATUAK ALDATU</button>
+						<button class="home_button"><a href="user_menu.php"><img src="../../irudiak/home.png" width="30px"></a></button>    
 						<p id="erroreak" class="error_message"></p>   
 					</form>
 				</div>
