@@ -85,7 +85,10 @@ header p{
 
 .h1{
   color: #FFFFFF;
+  background-color: #76b852;
+  text-align: center;
   font-size: 40px;
   font-family: 'Times New Roman';
   text-transform: uppercase;
+  position: sticky;
 }
