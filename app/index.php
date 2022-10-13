@@ -26,6 +26,8 @@
 
     <body>
         <div class="login-page">
+            <!--TODO: PONER EL H1 EN BONITO MESE_-->
+            <h1 class="h1">MUBASA LIBURUTEGIA</h1>
             <div class="form">
                 <form class="login-form" method="post" action="config_php/login.php">
                     EMAIL: <input type="email" name="email" placeholder="Zura email-a sartu" required><br>

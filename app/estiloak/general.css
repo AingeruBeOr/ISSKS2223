@@ -83,3 +83,9 @@ header p{
   text-align: center;
 }
 
+.h1{
+  color: #FFFFFF;
+  font-size: 40px;
+  font-family: 'Times New Roman';
+  text-transform: uppercase;
+}
