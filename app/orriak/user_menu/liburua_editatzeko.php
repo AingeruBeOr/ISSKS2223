@@ -26,6 +26,7 @@
         <title>Web Sistema</title>
         <link rel="stylesheet" type="text/css" href="../../estiloak/general.css">
         <link rel="stylesheet" type="text/css" href="../../estiloak/index.css">
+		<link rel="shortcut icon" href="irudiak/book.png" />
     </head>
     <body>
 		<?php include '../../templates/header.php'; ?>
@@ -37,7 +38,7 @@
                             ISBN (ezin da aldatu): <input type= "text" name="ISBN" value="<?php echo $ISBN ?>" readonly>
                         </div>
 						<div class="formulario__grupo" id="grupo__izena"> 
-							IZENBURUA <input type="text" id="izenburua" name="Izenburua" value="<?php echo $IZENBURUA ?>" required>
+							IZENBURUA: <input type="text" id="izenburua" name="Izenburua" value="<?php echo $IZENBURUA ?>" required>
 						</div>
 						<div class="formulario__grupo" id="grupo__nan">
 							IDAZLEA: <input type="text" id="idazlea" name="Idazlea" value="<?php echo $IDAZLEA ?>" required>

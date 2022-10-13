@@ -10,7 +10,7 @@
     }
 
 	if(empty($_GET['keyerror'])) $error = 0;
-    else $error = 1;
+    else $error = $_GET['keyerror']
    
 ?>
 
@@ -20,6 +20,7 @@
         <title>Web Sistema</title>
 		<link rel="stylesheet" type="text/css" href="../estiloak/general.css">
         <link rel="stylesheet" type="text/css" href="../estiloak/index.css">
+		<link rel="shortcut icon" href="irudiak/book.png" />
     </head>
     <body>
 		<main>
@@ -50,7 +51,12 @@
 							
 						<button type="submit" name="erregistratu">Erregistratu</button>
 						<p class="message">Jadanik erregistratuta? <a href="../index.php">Identifikatu</a></p>
-						<p id="erroreak" class="error_message"><?php if($error==1) echo "Jadanik exisititzen da erabiltzaile bat NAN horrekin." ?></p>       
+						<p id="erroreak" class="error_message">
+							<?php 
+								if($error==1) echo "Jadanik existitzen da erabiltzaile bat email horrekin.";
+								if($error==2) echo "Jadanik existitzen da erabiltzaile bat NAN horrekin." ;
+							?>
+						</p>       
 					</form>
 				</div>
 			</div>
