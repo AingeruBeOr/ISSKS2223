@@ -17,10 +17,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Web Sistema</title>
+        <title>Liburua sartu</title>
         <link rel="stylesheet" type="text/css" href="../../estiloak/general.css">
         <link rel="stylesheet" type="text/css" href="../../estiloak/index.css">
-        <link rel="shortcut icon" href="irudiak/book.png" />
+        <link rel="shortcut icon" href="../../irudiak/book.png" />
     </head>
     <body>
         <?php include '../../templates/header.php'; ?>

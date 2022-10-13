@@ -15,10 +15,10 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Web Sistema</title>
+		<title>Liburutegia</title>
 		<link rel="stylesheet" type="text/css" href="../../estiloak/general.css">
 		<link rel="stylesheet" type="text/css" href="../../estiloak/user_menu/liburu_zerrenda.css">
-		<link rel="shortcut icon" href="~/irudiak/book.png" />
+		<link rel="shortcut icon" href="../../irudiak/book.png" />
 	</head>
 	<body>
 		<?php include("../../templates/header.php"); ?>

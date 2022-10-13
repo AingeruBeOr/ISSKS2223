@@ -14,10 +14,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Web Sistema</title>
+        <title>Menu</title>
         <link rel="stylesheet" type="text/css" href="../../estiloak/general.css">
         <link rel="stylesheet" type="text/css" href="../../estiloak/user_menu/user_menu.css">
-        <link rel="shortcut icon" href="irudiak/book.png" />
+        <link rel="shortcut icon" href="../../irudiak/book.png" />
     </head>
     <body>
         <?php include '../../templates/header.php'; ?>

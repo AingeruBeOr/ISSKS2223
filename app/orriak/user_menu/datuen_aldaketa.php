@@ -28,7 +28,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Web Sistema</title>
+        <title>Perfil aldaketa</title>
         <link rel="stylesheet" type="text/css" href="../../estiloak/general.css">
         <link rel="stylesheet" type="text/css" href="../../estiloak/index.css">
 		<link rel="shortcut icon" href="../../irudiak/book.png" />
@@ -60,7 +60,7 @@
 						<div class="formulario__grupo" id="grupo__email">
 							Konfirmazioa: <input type="password" id="pasahitza2" name="pasahitza2">
 						</div>
-						<div class="boton_necesario" id="grupo__email">
+						<div class="boton_necesario">
 							SARTU ZURE PASAHITZA DATUAK ALDATZEKO: <input class="boton_necesario" type="password" id="zurepasahitza" name="zurepasahitza" required>
 						</div>
 						<button type="submit" name="erregistratu">DATUAK ALDATU</button>
