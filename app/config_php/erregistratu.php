@@ -24,7 +24,7 @@
             header("Location: ../orriak/erregistratu.php?keyerror=2");
         }
         else{
-            header("Location: ../orriak/user_menu/user_menu.php"); //erabiltzailea eta pasahitza ondo sartu badira, "user_menu.html" orrira joango gara.
+            header("Location: ../orriak/user_menu/user_menu.php");
         }
     } 
     

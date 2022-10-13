@@ -16,6 +16,7 @@
         //erabiltzailea eta pasahitza ondo sartu badira, "user_menu.html" orrira joango gara.
         $_SESSION['username'] = $row['Izen_Abizenak'];
         $_SESSION['email'] = $email;
+        $_SESSION['ID_USER'] = $row['ID'];
         header("Location: ../orriak/user_menu/user_menu.php"); 
     }
     else{

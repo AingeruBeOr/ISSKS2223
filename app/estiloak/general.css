@@ -8,6 +8,10 @@ body {
     background: #76b852; /* fallback for old browsers */
     background: hsl(98, 40%, 60%);
     background: linear-gradient(90deg, rgba(141,194,111,1) 0%, rgba(118,184,82,1) 50%);
+    background-image: url("../irudiak/fondo.jpg");
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center center;
     font-family: "Roboto", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;      
