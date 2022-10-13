@@ -77,6 +77,11 @@
   color: #EF3B3A;
 }
 
+.boton_necesario{
+	border: #76b852;
+	border-radius: 2px;
+  }
+
 /*----------------------AÑADIDO-----------------------*/
 .formulario {
 	display: grid;
