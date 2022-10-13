@@ -2,10 +2,10 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Servidor: db
--- Tiempo de generación: 05-10-2022 a las 08:12:47
--- Versión del servidor: 10.8.2-MariaDB-1:10.8.2+maria~focal
--- Versión de PHP: 8.0.19
+-- Host: db
+-- Generation Time: Oct 13, 2022 at 06:59 AM
+-- Server version: 10.8.2-MariaDB-1:10.8.2+maria~focal
+-- PHP Version: 8.0.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `database`
+-- Database: `database`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `liburua`
+-- Table structure for table `liburua`
 --
 
 CREATE TABLE `liburua` (
@@ -37,7 +37,7 @@ CREATE TABLE `liburua` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `liburua`
+-- Dumping data for table `liburua`
 --
 
 INSERT INTO `liburua` (`IZENBURUA`, `IDAZLEA`, `ARGITALPENDATA`, `ORRIALDEKOP`, `ARGITALETXEA`, `ISBN`) VALUES
@@ -53,12 +53,13 @@ INSERT INTO `liburua` (`IZENBURUA`, `IDAZLEA`, `ARGITALPENDATA`, `ORRIALDEKOP`, 
 ('Las madres (la novia gitana 4)', 'Carmen Mola', '2022-09-27', 464, 'Alfaguara', '6'),
 ('Los mil nombres de la libertad', 'Maria Reig', '2022-09-15', 880, 'SUMA', '7'),
 ('Memorias de una salvaje', 'Bebi Fernandez', '2021-09-29', 464, 'Planeta', '8'),
+('Izaroko altxorra', 'Iñaki Friera', '2022-01-11', 156, 'SM', '89'),
 ('Ser mujer negra en Espana', 'Desiree Bela-Lobelade', '2018-09-20', 184, 'Plan B', '9');
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `usuarios`
+-- Table structure for table `usuarios`
 --
 
 CREATE TABLE `usuarios` (
@@ -71,29 +72,32 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `usuarios`
+-- Dumping data for table `usuarios`
 --
 
 INSERT INTO `usuarios` (`DNI`, `Izen_Abizenak`, `Telefonoa`, `Jaiotze_Data`, `Email`, `Pasahitza`) VALUES
-('1', 'mikel', 0, '0000-00-00', '', '1234'),
-('2', 'aitor', 0, '0000-00-00', '', '5678'),
-('33333333-A', 'Pepe', 676666623, '2022-10-11', 'perro@gmail.com', '1357');
+('1', 'mikel', 0, '0000-00-00', 'mikel@gmail.com', '1234'),
+('11111111-H', 'Proba erabiltzailea', 987654321, '2020-01-07', 'proba@proba.es', 'qwerty'),
+('2', 'aitor', 0, '0000-00-00', 'aitor@gmail.com', '5678'),
+('33333333-A', 'Pepe', 676666623, '2022-10-11', 'perro@gmail.com', '1357'),
+('37242837-H', 'Proba', 654654654, '2012-01-01', 'proba2@proba.com', 'hola1234');
 
 --
--- Índices para tablas volcadas
+-- Indexes for dumped tables
 --
 
 --
--- Indices de la tabla `liburua`
+-- Indexes for table `liburua`
 --
 ALTER TABLE `liburua`
   ADD PRIMARY KEY (`ISBN`);
 
 --
--- Indices de la tabla `usuarios`
+-- Indexes for table `usuarios`
 --
 ALTER TABLE `usuarios`
-  ADD PRIMARY KEY (`DNI`);
+  ADD PRIMARY KEY (`DNI`),
+  ADD UNIQUE KEY `Email` (`Email`) USING HASH;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
