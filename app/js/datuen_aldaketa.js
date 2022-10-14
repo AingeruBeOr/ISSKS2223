@@ -20,6 +20,7 @@ const p1=document.getElementById('pasahitza');
 const p2=document.getElementById('pasahitza2');
 const data=document.getElementById('Jaiotze_data');
 const errore_mezu=document.getElementById('erroreak');
+const zure_pasahitza = document.getElementById('zurepasahitza');
 
 /**
  * 
@@ -34,6 +35,7 @@ function formularioaBalioztatu(evento){
 	p2.style.border = "none";
 	data.style.border = "none";
 	nan.style.border = "none";
+	zure_pasahitza.style.border = "none";
 
 	evento.preventDefault();
 	if(nanBalioztatu(nan.value)==1){
@@ -76,6 +78,11 @@ function formularioaBalioztatu(evento){
         }
     }
 	console.log("Control 5")
+	if(zure_pasahitza.value === null){
+		zure_pasahitza.style.border = "2px solid red";
+		errore_mezu.innerHTML = "Zure pasahitza sartu datuak aldatzeko";
+		return;
+	}
 	this.submit();
 
 }

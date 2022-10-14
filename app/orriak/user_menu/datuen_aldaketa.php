@@ -61,7 +61,7 @@
 							Konfirmazioa: <input type="password" id="pasahitza2" name="pasahitza2">
 						</div>
 						<div class="boton_necesario">
-							SARTU ZURE PASAHITZA DATUAK ALDATZEKO: <input class="boton_necesario" type="password" id="zurepasahitza" name="zurepasahitza" required>
+							SARTU ZURE PASAHITZA DATUAK ALDATZEKO: <input class="boton_necesario" type="password" id="zurepasahitza" name="zurepasahitza">
 						</div>
 						<button type="submit" name="erregistratu">DATUAK ALDATU</button>
 						<button class="home_button"><a href="user_menu.php"><img src="../../irudiak/home.png" width="30px"></a></button>    

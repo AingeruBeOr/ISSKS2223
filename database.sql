@@ -2,10 +2,10 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: db
--- Generation Time: Oct 13, 2022 at 06:59 AM
--- Server version: 10.8.2-MariaDB-1:10.8.2+maria~focal
--- PHP Version: 8.0.19
+-- Servidor: db
+-- Tiempo de generación: 14-10-2022 a las 10:10:41
+-- Versión del servidor: 10.8.2-MariaDB-1:10.8.2+maria~focal
+-- Versión de PHP: 8.0.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `database`
+-- Base de datos: `database`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `liburua`
+-- Estructura de tabla para la tabla `liburua`
 --
 
 CREATE TABLE `liburua` (
@@ -37,7 +37,7 @@ CREATE TABLE `liburua` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `liburua`
+-- Volcado de datos para la tabla `liburua`
 --
 
 INSERT INTO `liburua` (`IZENBURUA`, `IDAZLEA`, `ARGITALPENDATA`, `ORRIALDEKOP`, `ARGITALETXEA`, `ISBN`) VALUES
@@ -59,10 +59,11 @@ INSERT INTO `liburua` (`IZENBURUA`, `IDAZLEA`, `ARGITALPENDATA`, `ORRIALDEKOP`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `usuarios`
+-- Estructura de tabla para la tabla `usuarios`
 --
 
 CREATE TABLE `usuarios` (
+  `ID` int(11) NOT NULL,
   `DNI` varchar(10) NOT NULL,
   `Izen_Abizenak` text NOT NULL,
   `Telefonoa` int(9) NOT NULL,
@@ -72,32 +73,44 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `usuarios`
+-- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`DNI`, `Izen_Abizenak`, `Telefonoa`, `Jaiotze_Data`, `Email`, `Pasahitza`) VALUES
-('1', 'mikel', 0, '0000-00-00', 'mikel@gmail.com', '1234'),
-('11111111-H', 'Proba erabiltzailea', 987654321, '2020-01-07', 'proba@proba.es', 'qwerty'),
-('2', 'aitor', 0, '0000-00-00', 'aitor@gmail.com', '5678'),
-('33333333-A', 'Pepe', 676666623, '2022-10-11', 'perro@gmail.com', '1357'),
-('37242837-H', 'Proba', 654654654, '2012-01-01', 'proba2@proba.com', 'hola1234');
+INSERT INTO `usuarios` (`ID`, `DNI`, `Izen_Abizenak`, `Telefonoa`, `Jaiotze_Data`, `Email`, `Pasahitza`) VALUES
+(1, '00000023-T', 'mikel', 123456789, '2002-03-05', 'mikel@gmail.com', '1234'),
+(2, '00000024-R', 'Proba erabiltzailea', 987654321, '2020-01-07', 'proba@proba.es', 'qwerty'),
+(3, '00000025-W', 'aitor', 987654321, '2006-07-04', 'aitor@gmail.com', '5678'),
+(4, '33333333-A', 'Pepe', 676666623, '2022-10-11', 'perro@gmail.com', '1357'),
+(5, '37242837-H', 'Proba', 654654654, '2012-01-01', 'proba2@proba.com', 'hola1234');
 
 --
--- Indexes for dumped tables
+-- Índices para tablas volcadas
 --
 
 --
--- Indexes for table `liburua`
+-- Indices de la tabla `liburua`
 --
 ALTER TABLE `liburua`
   ADD PRIMARY KEY (`ISBN`);
 
 --
--- Indexes for table `usuarios`
+-- Indices de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  ADD PRIMARY KEY (`DNI`),
+  ADD PRIMARY KEY (`ID`),
+  ADD UNIQUE KEY `DNI` (`DNI`),
+  ADD UNIQUE KEY `ID` (`ID`),
   ADD UNIQUE KEY `Email` (`Email`) USING HASH;
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
