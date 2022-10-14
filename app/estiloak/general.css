@@ -55,12 +55,14 @@ button a{
 .home_button{
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
-  display: relative;
+  display: inline-block;
+  position: relative;
   outline: 0;
   background: #4CAF50;
   width: 100%;
   border: 2px solid;
   padding: 5px;
+  text-align: center;
   color: #FFFFFF;
   font-size: 14px;
   -webkit-transition: all 0.3 ease;
@@ -96,3 +98,5 @@ header p{
   position: sticky;
   padding: 5px;
 }
+
+

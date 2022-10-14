@@ -65,7 +65,7 @@
 						</div>
 						<button type="submit" name="erregistratu">DATUAK ALDATU</button>
 					</form>
-					<button class="home_button"><a href="user_menu.php"><img src="../../irudiak/home.png" width="30px"></a></button>    
+					<button class="home_button" onclick="location.href='user_menu.php'"><img src="../../irudiak/home.png" width="30px"></button>    
 					<p id="erroreak" class="error_message">
 						<?php 
 							if($error==1) {

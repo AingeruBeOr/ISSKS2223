@@ -56,6 +56,7 @@
 						<button name="erregistratu">Aldatu</button> 
 						<p id="erroreak" class="error_message"></p>     
 					</form>
+					<button class="home_button" onclick="location.href='liburu_zerrenda.php'"><img src="../../irudiak/home.png" width="30px"></button>    
 				</div>
 			</div>
 			<script src="../../js/liburua_editatzeko.js"></script>

@@ -37,6 +37,7 @@
                         <button type="submit" name="ados">Ados</button>
                         <p id="erroreak" class="error_message"><?php if($error==1) echo "Jadanik exisititzen da liburu bat ISBN horrekin." ?></p>
                     </form>
+                    <button class="home_button" onclick="location.href='user_menu.php'"><img src="../../irudiak/home.png" width="30px"></button>    
                 </div>
             </div>
             <script src="../../js/liburu_gehitu.js"></script>
