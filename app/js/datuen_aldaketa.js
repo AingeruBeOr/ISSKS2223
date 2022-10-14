@@ -78,13 +78,13 @@ function formularioaBalioztatu(evento){
         }
     }
 	console.log("Control 5")
-	if(zure_pasahitza.value === null){
+	console.log(zure_pasahitza.value);
+	if(zure_pasahitza.value == ""){
 		zure_pasahitza.style.border = "2px solid red";
 		errore_mezu.innerHTML = "Zure pasahitza sartu datuak aldatzeko";
 		return;
 	}
 	this.submit();
-
 }
 
 function nanBalioztatu(dni) {

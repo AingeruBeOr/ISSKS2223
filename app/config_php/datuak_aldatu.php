@@ -12,13 +12,13 @@
     $Email = $_POST['email'];
     $Pasahitz = $_POST['pasahitza'];
 
-    $ZP= $_POST['zurepasahitza'];
+    $Zure_pasahitza= $_POST['zurepasahitza'];
 
     $query = mysqli_query($conn, "SELECT Pasahitza FROM usuarios WHERE ID = '$id'") or die (mysqli_error($conn));
     $row = mysqli_fetch_array($query);
     $NirePasahitza = $row['Pasahitza'];
 
-    if($NirePasahitza==$ZP){
+    if($NirePasahitza==$Zure_pasahitza){
         if(empty($Pasahitz)){
             $query = mysqli_query($conn, "UPDATE usuarios SET DNI='$NAN', IZEN_ABIZENAK = '$Izena', TELEFONOA='$Telefonoa', JAIOTZE_DATA='$Jaiotze_data', EMAIL='$Email' WHERE ID='$id'") or die (mysqli_error($conn));
         } else {

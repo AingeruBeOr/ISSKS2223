@@ -10,11 +10,14 @@ body {
     background: linear-gradient(90deg, rgba(141,194,111,1) 0%, rgba(118,184,82,1) 50%);
     background-image: url("../irudiak/fondo.jpg");
     background-size: cover;
-    background-repeat:no-repeat;
-    background-position: center center;
+    background-repeat: no-repeat;
+    background-position: center center fixed;
     font-family: "Roboto", sans-serif;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;      
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;      
 }
 
 /* Orrialdearen botoiak */
@@ -52,6 +55,7 @@ button a{
 .home_button{
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
+  display: relative;
   outline: 0;
   background: #4CAF50;
   width: 100%;

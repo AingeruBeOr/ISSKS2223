@@ -64,13 +64,18 @@
 							SARTU ZURE PASAHITZA DATUAK ALDATZEKO: <input class="boton_necesario" type="password" id="zurepasahitza" name="zurepasahitza">
 						</div>
 						<button type="submit" name="erregistratu">DATUAK ALDATU</button>
-						<button class="home_button"><a href="user_menu.php"><img src="../../irudiak/home.png" width="30px"></a></button>    
-						<p id="erroreak" class="error_message">
-							<?php 
-								if($error==1) echo "Zure oraingoko pasahitza ez da zuzena, saiatu berriro.";
-							?>
-						</p>   
 					</form>
+					<button class="home_button"><a href="user_menu.php"><img src="../../irudiak/home.png" width="30px"></a></button>    
+					<p id="erroreak" class="error_message">
+						<?php 
+							if($error==1) {
+								echo "Zure oraingoko pasahitza ez da zuzena, saiatu berriro.";
+								echo "<script>
+										document.getElementById('zurepasahitza').style.border = '2px solid red';
+									</script>";
+							}	
+						?>
+					</p>   
 				</div>
 			</div>
 			<script src="../../js/datuen_aldaketa.js"></script>
