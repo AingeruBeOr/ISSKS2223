@@ -1,8 +1,8 @@
 const expresiones = {
 	data: /^[0-9]{4}\-[0-9]{2}\-[0-9]{2}$/,
-	izena: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-    izenburu: /^[a-zA-ZÀ-ÿ0-9\s]{1,40}$/,
-	orrialde: /^[0-9]{0,4}$/
+	izena: /^[a-zA-ZÀ-ÿ\s\\_-]{1,40}$/, // Letras y espacios, pueden llevar acentos.
+    izenburu: /^[a-zA-ZÀ-ÿ0-9\s\\._\-\\(\\)]{1,40}$/,
+	orrialde: /^[0-9]{1,4}$/,
 }
 
 document.addEventListener("DOMContentLoaded", function(){
@@ -32,7 +32,7 @@ function formularioaBalioztatu(evento){
 	evento.preventDefault();
 
 	if(!expresiones.izenburu.test(izenburua.value)){
-		errore_mezu.innerHTML="Liburuaren izenburua txarto dago. Bakarrik testua edo zenbakiak idatz daiteke.";
+		errore_mezu.innerHTML="Liburuaren izenburua txarto dago. Bakarrik testua edo zenbakiak idatz daiteke, eta ez '-', '_', '.', '(' eta ')' ez diren siboloak.";
 		izenburua.style.border = "2px solid red";
 		return;
 	}
@@ -50,7 +50,7 @@ function formularioaBalioztatu(evento){
 	}	
 	console.log("Control 3")
 	if(!expresiones.orrialde.test(orri.value)){
-		errore_mezu.innerHTML="Orrialde kopurua txarto dago. 0-9999 orrialde egon daitezke.";
+		errore_mezu.innerHTML="Orrialde kopurua txarto adierazita dago. 0-9999 tarteko zenbakiak bakarrik izan daitezke.";
 		orri.style.border = "2px solid red";
 		return;
 	}

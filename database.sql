@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: db
--- Tiempo de generación: 14-10-2022 a las 10:10:41
+-- Tiempo de generación: 15-10-2022 a las 16:38:48
 -- Versión del servidor: 10.8.2-MariaDB-1:10.8.2+maria~focal
 -- Versión de PHP: 8.0.19
 
@@ -33,7 +33,7 @@ CREATE TABLE `liburua` (
   `ARGITALPENDATA` date NOT NULL,
   `ORRIALDEKOP` int(11) DEFAULT NULL,
   `ARGITALETXEA` varchar(30) DEFAULT NULL,
-  `ISBN` varchar(50) NOT NULL
+  `ISBN` bigint(13) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -41,20 +41,20 @@ CREATE TABLE `liburua` (
 --
 
 INSERT INTO `liburua` (`IZENBURUA`, `IDAZLEA`, `ARGITALPENDATA`, `ORRIALDEKOP`, `ARGITALETXEA`, `ISBN`) VALUES
-('Diario de un skin', 'Antonio Salas', '2006-02-07', 544, 'Temas de hoy', '1'),
-('Teoria King Kong', 'Virginie Despentes', '2007-10-03', 160, 'Le livre de Poche', '10'),
-('Teoria King Kong', 'Virginie Despentes', '2018-01-25', 176, 'Random House', '11'),
-('Teoria King Kong', 'Virginie Despentes', '2020-08-13', 176, 'Faber and Laber Ltd.', '12'),
-('Una educacion', 'Tara Westover', '2020-10-08', 472, 'Debolsillo', '13'),
-('El palestino', 'Antonio Salas', '2011-06-03', 960, 'Temas de hoy', '2'),
-('El peligro de estar cuerda', 'Rosa Montero', '2022-03-30', 360, 'Seix Barral', '3'),
-('El todo', 'Dave Eggers', '2022-05-19', 528, 'Literatura Random House', '4'),
-('La buena suerte', 'Rosa Montero', '2020-08-27', 328, 'Alfaguara', '5'),
-('Las madres (la novia gitana 4)', 'Carmen Mola', '2022-09-27', 464, 'Alfaguara', '6'),
-('Los mil nombres de la libertad', 'Maria Reig', '2022-09-15', 880, 'SUMA', '7'),
-('Memorias de una salvaje', 'Bebi Fernandez', '2021-09-29', 464, 'Planeta', '8'),
-('Izaroko altxorra', 'Iñaki Friera', '2022-01-11', 156, 'SM', '89'),
-('Ser mujer negra en Espana', 'Desiree Bela-Lobelade', '2018-09-20', 184, 'Plan B', '9');
+('Teoria King Kong', 'Virginie Despentes', '2007-10-03', 160, 'Le livre de Poche', 9782253122111),
+('Memorias de una salvaje', 'Bebi Fernandez', '2021-09-29', 464, 'Planeta', 9788408194453),
+('Ser mujer negra en España', 'Desiree Bela-Lobelade', '2018-09-20', 184, 'Plan B', 9788417001650),
+('La buena suerte', 'Rosa Montero', '2020-08-27', 328, 'Alfaguara', 9788420439457),
+('Las madres (la novia gitana 4)', 'Carmen Mola', '2022-09-27', 464, 'Alfaguara', 9788420456027),
+('El peligro de estar cuerda', 'Rosa Montero', '2022-03-30', 360, 'Seix Barral', 9788432240645),
+('El todo', 'Dave Eggers', '2022-05-19', 528, 'Literatura Random House', 9788439711650),
+('Teoria King Kong', 'Virginie Despentes', '2018-01-25', 176, 'Random House', 9788439733850),
+('Una educacion', 'Tara Westover', '2020-10-08', 472, 'Debolsillo', 9788466347846),
+('Izaroko altxorra', 'Iñaki Friera', '2022-01-11', 156, 'SM', 9788483258804),
+('Diario de un skin', 'Antonio Salas', '2006-02-07', 544, 'Temas de hoy', 9788484602507),
+('El palestino', 'Antonio Salas', '2011-06-03', 960, 'Temas de hoy', 9788484604686),
+('Los mil nombres de la libertad', 'Maria Reig', '2022-09-15', 880, 'SUMA', 9788491294054),
+('Teoria King Kong', 'Virginie Despentes', '2020-08-13', 176, 'Faber and Laber Ltd.', 9788494782916);
 
 -- --------------------------------------------------------
 

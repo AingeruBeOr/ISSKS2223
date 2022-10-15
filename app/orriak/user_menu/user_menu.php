@@ -24,7 +24,7 @@
         <div class="menua">
             <div class="botoi_panel">
                 <button><a href="./datuen_aldaketa.php">Nire datuak aldatu</a></button>
-                <button><a href="./liburu_zerrenda.php">Liburuen zerrenda ikusi</button>
+                <button><a href="./liburu_zerrenda.php">Liburuen zerrenda ikusi</a></button>
                 <button><a href="./liburu_gehitu.php">Liburua gehitu</a></button>
                 <button><a href="../../config_php/logout.php">Saioa itxi</a></button>
             </div>
