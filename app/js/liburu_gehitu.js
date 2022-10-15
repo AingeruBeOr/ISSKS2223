@@ -1,7 +1,7 @@
 const expresiones = {
 	data: /^[0-9]{4}\-[0-9]{2}\-[0-9]{2}$/,
 	izena: /^[a-zA-ZÀ-ÿ\s\\_-]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-    izenburu: /^[a-zA-ZÀ-ÿ0-9\s\\_-()]{1,40}$/,
+    izenburu: /^[a-zA-ZÀ-ÿ0-9\s\\._-()]{1,40}$/,
 	orrialde: /^[0-9]{0,4}$/,
 	isbn: /^[0-9]{0,40}$/
 } 
