@@ -1,6 +1,6 @@
 const expresiones = {
 	data: /^[0-9]{4}\-[0-9]{2}\-[0-9]{2}$/,
-	izena: /^[a-zA-ZÀ-ÿ\s\\_-]{1,40}$/, // Letras y espacios, pueden llevar acentos.
+	izena: /^[a-zA-ZÀ-ÿ\s\\._-]{1,40}$/, // Letras y espacios, pueden llevar acentos.
     izenburu: /^[a-zA-ZÀ-ÿ0-9\s\\._\-\\(\\)]{1,40}$/,
 	orrialde: /^[0-9]{1,4}$/,
 	isbn: /^[0-9]{13}$/
@@ -65,7 +65,7 @@ function formularioaBalioztatu(evento){
 	}
     console.log("Control 5")
 	if(!expresiones.isbn.test(isbn.value)){
-		errore_mezu.innerHTML="ISBN ez da zuzena dago. Zenbakiak bakarrik izan ditzake.";
+		errore_mezu.innerHTML="ISBN ez da zuzena. 13 zenbaki bakarrik izan ditzake.";
 		isbn.style.border = "2px solid red";
 		return;
 	}
