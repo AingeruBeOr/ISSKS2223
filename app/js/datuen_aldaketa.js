@@ -39,31 +39,31 @@ function formularioaBalioztatu(evento){
 
 	evento.preventDefault();
 	if(nanBalioztatu(nan.value)==1){
-		errore_mezu.innerHTML="NAN-aren formatua txarto. Hurrengo formatua izan behar du: 11111111-Z ";
+		errore_mezu.innerHTML="NAN-aren formatua txarto dago. Hurrengo formatua izan behar du: 11111111-Z eta hizkia zuzena izan behar da.";
 		nan.style.border = "2px solid red";
 		return;
 	}
 	console.log("Control 0")
 	if(!expresiones.izena.test(izena.value)){
-		errore_mezu.innerHTML="Izena Abizenak txarto. Bakarrik testua idatz daiteke";
+		errore_mezu.innerHTML="Izena Abizenak txarto dago. Bakarrik testua idatz daiteke.";
 		izena.style.border = "2px solid red";
 		return;
 	}
 	console.log("Control 1")
 	if(!expresiones.telefonoa.test(telefonoa.value)){
-		errore_mezu.innerHTML="Telefonoa txarto. 9 zenbaki bakarrik adieraz ditzakezu";
+		errore_mezu.innerHTML="Telefonoa txarto dago. 9 zenbaki bakarrik adieraz ditzakezu.";
 		telefonoa.style.border = "2px solid red";
 		return;
 	}
 	console.log("Control 2")
 	if(!expresiones.data.test(data.value)){
-		errore_mezu.innerHTML="Data txarto. Hurrengo formatua izan behar du: dd-mm-aaaa";
+		errore_mezu.innerHTML="Data txarto dago. Hurrengo formatua izan behar du: dd-mm-aaaa.";
 		data.style.border = "2px solid red";
 		return;
 	}	
 	console.log("Control 3")
 	if(!expresiones.email.test(email.value)){
-		errore_mezu.innerHTML="email txarto";
+		errore_mezu.innerHTML="Email txarto dago.";
 		email.style.border = "2px solid red";
 		return;
 	}
@@ -81,7 +81,7 @@ function formularioaBalioztatu(evento){
 	console.log(zure_pasahitza.value);
 	if(zure_pasahitza.value == ""){
 		zure_pasahitza.style.border = "2px solid red";
-		errore_mezu.innerHTML = "Zure pasahitza sartu datuak aldatzeko";
+		errore_mezu.innerHTML = "Zure pasahitza sartu datuak aldatzeko.";
 		return;
 	}
 	this.submit();

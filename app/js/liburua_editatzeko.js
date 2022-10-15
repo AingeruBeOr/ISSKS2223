@@ -32,31 +32,31 @@ function formularioaBalioztatu(evento){
 	evento.preventDefault();
 
 	if(!expresiones.izenburu.test(izenburua.value)){
-		errore_mezu.innerHTML="Liburuaren izenburua txarto. Bakarrik testua edo zenbakiak idatz daiteke";
+		errore_mezu.innerHTML="Liburuaren izenburua txarto dago. Bakarrik testua edo zenbakiak idatz daiteke.";
 		izenburua.style.border = "2px solid red";
 		return;
 	}
 	console.log("Control 1")
 	if(!expresiones.izena.test(idazlea.value)){
-		errore_mezu.innerHTML="Idazlea txarto. Bakarrik testua idatz daiteke";
+		errore_mezu.innerHTML="Idazlea txarto dago. Bakarrik testua idatz daiteke.";
 		idazlea.style.border = "2px solid red";
 		return;
 	}
 	console.log("Control 2")
 	if(!expresiones.data.test(data.value)){
-		errore_mezu.innerHTML="Data txarto. Hurrengo formatua izan behar du: dd-mm-aaaa";
+		errore_mezu.innerHTML="Data txarto dago. Hurrengo formatua izan behar du: dd-mm-aaaa.";
 		data.style.border = "2px solid red";
 		return;
 	}	
 	console.log("Control 3")
 	if(!expresiones.orrialde.test(orri.value)){
-		errore_mezu.innerHTML="Orrialde kopurua txarto. 0-9999 orrialde egon daitezke";
+		errore_mezu.innerHTML="Orrialde kopurua txarto dago. 0-9999 orrialde egon daitezke.";
 		orri.style.border = "2px solid red";
 		return;
 	}
 	console.log("Control 4")
     if(!expresiones.izena.test(argitaletxe.value)){
-		errore_mezu.innerHTML="Argitaletxea txarto. Bakarrik testua idatz daiteke";
+		errore_mezu.innerHTML="Argitaletxea txarto dago. Bakarrik testua idatz daiteke.";
 		argitaletxe.style.border = "2px solid red";
 		return;
 	}
