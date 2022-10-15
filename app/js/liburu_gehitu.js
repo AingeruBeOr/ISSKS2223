@@ -35,7 +35,7 @@ function formularioaBalioztatu(evento){
 	evento.preventDefault();
 
 	if(!expresiones.izenburu.test(izenburua.value)){
-		errore_mezu.innerHTML="Liburuaren izenburua txarto dago. Bakarrik testua edo zenbakiak idatz daiteke, eta ez '-', '_', '.', '(' eta ')' ez diren siboloak.";
+		errore_mezu.innerHTML="Liburuaren izenburua txarto dago. Bakarrik testua edo zenbakiak idatz daiteke, '-', '_', '.', '(' eta ')' siboloak ere jar daiteke.";
 		izenburua.style.border = "2px solid red";
 		return;
 	}
