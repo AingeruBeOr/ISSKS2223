@@ -4,7 +4,7 @@ const expresiones = {
     izenburu: /^[a-zA-ZÀ-ÿ0-9\s\\_-()]{1,40}$/,
 	orrialde: /^[0-9]{0,4}$/,
 	isbn: /^[0-9]{0,40}$/
-}
+} 
 
 document.addEventListener("DOMContentLoaded", function(){
 	document.getElementById("liburuDatu").addEventListener('submit', formularioaBalioztatu);
