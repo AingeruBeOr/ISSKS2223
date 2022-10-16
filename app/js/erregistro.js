@@ -38,31 +38,51 @@ function formularioaBalioztatu(evento){
 	evento.preventDefault();
 
 	if(!expresiones.izena.test(izena.value)){
+<<<<<<< HEAD
 		errore_mezu.innerHTML="Izena Abizenak txarto. Bakarrik testua idatz daiteke";
+=======
+		errore_mezu.innerHTML="Izena Abizenak txarto daude. Bakarrik testua idatz daiteke";
+>>>>>>> entrega_1
 		izena.style.border = "2px solid red";
 		return;
 	}
 	console.log("Control 0")
 	if(nanBalioztatu(nan.value)==1){
+<<<<<<< HEAD
 		errore_mezu.innerHTML="NAN-aren formatua txarto. Hurrengo formatua izan behar du: 11111111-Z ";
+=======
+		errore_mezu.innerHTML="NAN-aren formatua txarto dago. Hurrengo formatua izan behar du: 11111111-Z eta hizkia ondo egon behar du";
+>>>>>>> entrega_1
 		nan.style.border = "2px solid red";
 		return;
 	}
 	console.log("Control 1")
 	if(!expresiones.telefonoa.test(telefonoa.value)){
+<<<<<<< HEAD
 		errore_mezu.innerHTML="Telefonoa txarto. 9 zenbaki bakarrik adieraz ditzakezu";
+=======
+		errore_mezu.innerHTML="Telefonoa txarto dago. 9 zenbaki bakarrik adieraz ditzakezu";
+>>>>>>> entrega_1
 		telefonoa.style.border = "2px solid red";
 		return;
 	}
 	console.log("Control 2")
 	if(!expresiones.data.test(data.value)){
+<<<<<<< HEAD
 		errore_mezu.innerHTML="Data txarto. Hurrengo formatua izan behar du: dd-mm-aaaa";
+=======
+		errore_mezu.innerHTML="Data txarto dago. Hurrengo formatua izan behar du: dd-mm-aaaa";
+>>>>>>> entrega_1
 		data.style.border = "2px solid red";
 		return;
 	}	
 	console.log("Control 3")
 	if(!expresiones.email.test(email.value)){
+<<<<<<< HEAD
 		errore_mezu.innerHTML="email txarto";
+=======
+		errore_mezu.innerHTML="Emaila txarto dago, hurrengo formatua izan behar du: adibidea@zerbitzari.extensioa";
+>>>>>>> entrega_1
 		email.style.border = "2px solid red";
 		return;
 	}

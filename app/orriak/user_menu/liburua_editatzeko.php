@@ -23,9 +23,16 @@
 <!DOCTYPE html>
 <html>
     <head>
+<<<<<<< HEAD
         <title>Web Sistema</title>
         <link rel="stylesheet" type="text/css" href="../../estiloak/general.css">
         <link rel="stylesheet" type="text/css" href="../../estiloak/index.css">
+=======
+        <title>Editatu liburuak</title>
+        <link rel="stylesheet" type="text/css" href="../../estiloak/general.css">
+        <link rel="stylesheet" type="text/css" href="../../estiloak/index.css">
+		<link rel="shortcut icon" href="../../irudiak/book.png" />
+>>>>>>> entrega_1
     </head>
     <body>
 		<?php include '../../templates/header.php'; ?>
@@ -37,7 +44,11 @@
                             ISBN (ezin da aldatu): <input type= "text" name="ISBN" value="<?php echo $ISBN ?>" readonly>
                         </div>
 						<div class="formulario__grupo" id="grupo__izena"> 
+<<<<<<< HEAD
 							IZENBURUA <input type="text" id="izenburua" name="Izenburua" value="<?php echo $IZENBURUA ?>" required>
+=======
+							IZENBURUA: <input type="text" id="izenburua" name="Izenburua" value="<?php echo $IZENBURUA ?>" required>
+>>>>>>> entrega_1
 						</div>
 						<div class="formulario__grupo" id="grupo__nan">
 							IDAZLEA: <input type="text" id="idazlea" name="Idazlea" value="<?php echo $IDAZLEA ?>" required>
@@ -53,8 +64,14 @@
 						</div>
 							
 						<button name="erregistratu">Aldatu</button> 
+<<<<<<< HEAD
 						<p id="erroreak" class="error_message"></p>     
 					</form>
+=======
+					</form>
+					<button class="home_button" onclick="location.href='liburu_zerrenda.php'"><img src="../../irudiak/home.png" width="30px"></button>    
+					<p id="erroreak" class="error_message"></p>     
+>>>>>>> entrega_1
 				</div>
 			</div>
 			<script src="../../js/liburua_editatzeko.js"></script>

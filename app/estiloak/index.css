@@ -1,7 +1,11 @@
 .login-page {
   width: 360px;
   padding: 8% 0 0;
+<<<<<<< HEAD
   margin: auto;
+=======
+  margin: 25px auto 100px;
+>>>>>>> entrega_1
 }
 
 
@@ -77,6 +81,14 @@
   color: #EF3B3A;
 }
 
+<<<<<<< HEAD
+=======
+.boton_necesario{
+	border: #76b852;
+	border-radius: 2px;
+  }
+
+>>>>>>> entrega_1
 /*----------------------AÑADIDO-----------------------*/
 .formulario {
 	display: grid;

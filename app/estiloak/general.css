@@ -8,9 +8,22 @@ body {
     background: #76b852; /* fallback for old browsers */
     background: hsl(98, 40%, 60%);
     background: linear-gradient(90deg, rgba(141,194,111,1) 0%, rgba(118,184,82,1) 50%);
+<<<<<<< HEAD
     font-family: "Roboto", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;      
+=======
+    background-image: url("../irudiak/fondo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center fixed;
+    font-family: "Roboto", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;      
+>>>>>>> entrega_1
 }
 
 /* Orrialdearen botoiak */
@@ -19,9 +32,15 @@ button {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
+<<<<<<< HEAD
   background: #4CAF50;
   width: 100%;
   border: 0;
+=======
+  background: #4caf50;
+  width: 100%;
+  border: 2px solid;
+>>>>>>> entrega_1
   padding: 15px;
   color: #FFFFFF;
   font-size: 14px;
@@ -32,6 +51,39 @@ button {
 button:hover, button:active, button:focus {
   background: #43A047;
 }
+<<<<<<< HEAD
+=======
+button a{
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: 0;
+  width: 100%;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.home_button{
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  display: inline-block;
+  position: relative;
+  outline: 0;
+  background: #4CAF50;
+  width: 100%;
+  border: 2px solid;
+  padding: 5px;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+>>>>>>> entrega_1
 
 header{
   background-color: white;
@@ -50,4 +102,20 @@ header img{
 header p{
   margin: 0;
   text-align: center;
+<<<<<<< HEAD
 }
+=======
+}
+
+.h1{
+  color: #FFFFFF;
+  background-color: #4caf50;
+  text-align: center;
+  font-size: 40px;
+  text-transform: uppercase;
+  position: sticky;
+  padding: 5px;
+}
+
+
+>>>>>>> entrega_1

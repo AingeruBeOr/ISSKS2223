@@ -10,6 +10,7 @@
     $Pasahitza = $_POST["Pasahitza"];
     $Konfirmazioa = $_POST["Konfirmazioa"];
 
+<<<<<<< HEAD
     $insert = "INSERT INTO usuarios (`DNI`,`Izen_Abizenak`,`Telefonoa`,`Jaiotze_Data`,`Email`,`Pasahitza`) 
                VALUES ('$NAN','$Izena', '$Telefonoa' ,'$Jaiotze_data','$email','$Pasahitza')" ;
     $query = mysqli_query($conn, $insert); //or die (mysqli_error($conn));
@@ -20,6 +21,25 @@
     else{
         header("Location: ../orriak/user_menu/user_menu.php"); //erabiltzailea eta pasahitza ondo sartu badira, "user_menu.html" orrira joango gara.
     }
+=======
+    $select = "SELECT * FROM usuarios WHERE email = '$email'";
+    $query = mysqli_query($conn, $select);
+    $num_rows = mysqli_num_rows($query);
+    if($num_rows>=1) header("Location: ../orriak/erregistratu.php?keyerror=1");
+    else{
+        $insert = "INSERT INTO usuarios (`DNI`,`Izen_Abizenak`,`Telefonoa`,`Jaiotze_Data`,`Email`,`Pasahitza`) 
+               VALUES ('$NAN','$Izena', '$Telefonoa' ,'$Jaiotze_data','$email','$Pasahitza')" ;
+        
+        $query = mysqli_query($conn, $insert); //or die (mysqli_error($conn));
+        
+        if(mysqli_errno($conn) == 1062){ //Adierazitako NAN jadanik datu basean badago (1062 error: Duplicate primary entry)
+            header("Location: ../orriak/erregistratu.php?keyerror=2");
+        }
+        else{
+            header("Location: ../orriak/user_menu/user_menu.php");
+        }
+    } 
+>>>>>>> entrega_1
     
     mysqli_close($conn);
 ?>

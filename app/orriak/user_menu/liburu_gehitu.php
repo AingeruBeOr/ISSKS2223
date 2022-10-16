@@ -17,9 +17,16 @@
 <!DOCTYPE html>
 <html>
     <head>
+<<<<<<< HEAD
         <title>Web Sistema</title>
         <link rel="stylesheet" type="text/css" href="../../estiloak/general.css">
         <link rel="stylesheet" type="text/css" href="../../estiloak/index.css">
+=======
+        <title>Liburua sartu</title>
+        <link rel="stylesheet" type="text/css" href="../../estiloak/general.css">
+        <link rel="stylesheet" type="text/css" href="../../estiloak/index.css">
+        <link rel="shortcut icon" href="../../irudiak/book.png" />
+>>>>>>> entrega_1
     </head>
     <body>
         <?php include '../../templates/header.php'; ?>
@@ -27,6 +34,7 @@
             <div class="login-page">
                 <div class="form">
                     <form class="resgister-form" id="liburuDatu" method="post" action="../../config_php/liburuak_sartu.php">
+<<<<<<< HEAD
                         Izenburua: <input type="text" id="izenburua" name="izenburua" required>
                         Idazlea: <input type="text" id="idazlea" name="idazlea" required>
                         Argitalpen data: <input type="date"  id="ArgitalpenData" name="ArgitalpenData"  required>
@@ -36,6 +44,18 @@
                         <button type="submit" name="ados">Ados</button>
                         <p id="erroreak" class="error_message"><?php if($error==1) echo "Jadanik exisititzen da liburu bat ISBN horrekin." ?></p>
                     </form>
+=======
+                        Izenburua: <input type="text" id="izenburua" name="izenburua" placeholder="Harry Potter 2" required>
+                        Idazlea: <input type="text" id="idazlea" name="idazlea" placeholder="J K Rowling" required>
+                        Argitalpen data: <input type="date"  id="ArgitalpenData" name="ArgitalpenData" required>
+                        Orrialde kopurua: <input type="text" id="OrrialdeKop" name="OrrialdeKop" required>
+                        Argitaletxea: <input type="text" id="argitaletxea" name="argitaletxea" placeholder="Bloomsbury" required>
+                        ISBN: <input type="text" id="ISBN" name="ISBN" placeholder="1234567890123" required>
+                        <button type="submit" name="ados">Ados</button>
+                    </form>
+                    <button class="home_button" onclick="location.href='user_menu.php'"><img src="../../irudiak/home.png" width="30px"></button>    
+                    <p id="erroreak" class="error_message"><?php if($error==1) echo "Jadanik exisititzen da liburu bat ISBN horrekin." ?></p>
+>>>>>>> entrega_1
                 </div>
             </div>
             <script src="../../js/liburu_gehitu.js"></script>

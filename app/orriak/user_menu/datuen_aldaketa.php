@@ -9,6 +9,10 @@
     if(!isset($erabiltzaile)){
         header("location: ../../index.php");
     }
+<<<<<<< HEAD
+=======
+	
+>>>>>>> entrega_1
 
     $query = mysqli_query($conn, "SELECT * FROM usuarios WHERE izen_abizenak = '$erabiltzaile'") or die (mysqli_error($conn));
     $row = mysqli_fetch_array($query);
@@ -19,14 +23,27 @@
     $EMAIL = $row['Email'];
 
 	$PASAHITZA = $row['Pasahitza'];
+<<<<<<< HEAD
+=======
+
+	if(empty($_GET['keyerror'])) $error = 0;
+    else $error = $_GET['keyerror']
+>>>>>>> entrega_1
 ?>
 
 <!DOCTYPE html>
 <html>
     <head>
+<<<<<<< HEAD
         <title>Web Sistema</title>
         <link rel="stylesheet" type="text/css" href="../../estiloak/general.css">
         <link rel="stylesheet" type="text/css" href="../../estiloak/index.css">
+=======
+        <title>Perfil aldaketa</title>
+        <link rel="stylesheet" type="text/css" href="../../estiloak/general.css">
+        <link rel="stylesheet" type="text/css" href="../../estiloak/index.css">
+		<link rel="shortcut icon" href="../../irudiak/book.png" />
+>>>>>>> entrega_1
     </head>
     <body>
 		<?php include '../../templates/header.php'; ?>
@@ -35,7 +52,11 @@
 				<div class="form">
 					<form class="resgister-form" id="formulario" method="post" action="../../config_php/datuak_aldatu.php">
 						<div class="formulario__grupo" id="grupo__nan">
+<<<<<<< HEAD
 							NAN (ezin da aldatu): <input type="text" name="NAN" value="<?php echo $DNI ?>" readonly>
+=======
+							NAN: <input type="text" id="NAN" name="NAN" value="<?php echo $DNI ?>" required>
+>>>>>>> entrega_1
 						</div>
 						<div class="formulario__grupo" id="grupo__izena"> 
 							Izen Abizenak (erabiltzailea): <input type="text" id="Izena" name="Izena" value="<?php echo $IZEN_ABIZENAK ?>" required>
@@ -50,14 +71,37 @@
 							Email: <input type="email" id="email" name="email" value="<?php echo $EMAIL ?>" required>
 						</div>
 						<div class="formulario__grupo" id="grupo__email">
+<<<<<<< HEAD
 							Pasahitza berria: <input type="password" id="pasahitza" name="pasahitza">
+=======
+							Pasahitza berria (nahi izatekotan): <input type="password" id="pasahitza" name="pasahitza">
+>>>>>>> entrega_1
 						</div>
 						<div class="formulario__grupo" id="grupo__email">
 							Konfirmazioa: <input type="password" id="pasahitza2" name="pasahitza2">
 						</div>
+<<<<<<< HEAD
 						<button type="submit" name="erregistratu">DATUAK ALDATU</button>   
 						<p id="erroreak" class="error_message"></p>   
 					</form>
+=======
+						<div class="boton_necesario">
+							SARTU ZURE PASAHITZA DATUAK ALDATZEKO: <input class="boton_necesario" type="password" id="zurepasahitza" name="zurepasahitza">
+						</div>
+						<button type="submit" name="erregistratu">DATUAK ALDATU</button>
+					</form>
+					<button class="home_button" onclick="location.href='user_menu.php'"><img src="../../irudiak/home.png" width="30px"></button>    
+					<p id="erroreak" class="error_message">
+						<?php 
+							if($error==1) {
+								echo "Zure oraingoko pasahitza ez da zuzena, saiatu berriro.";
+								echo "<script>
+										document.getElementById('zurepasahitza').style.border = '2px solid red';
+									</script>";
+							}	
+						?>
+					</p>   
+>>>>>>> entrega_1
 				</div>
 			</div>
 			<script src="../../js/datuen_aldaketa.js"></script>

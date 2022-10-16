@@ -15,10 +15,17 @@
 <!DOCTYPE html>
 <html>
 	<head>
+<<<<<<< HEAD
 		<title>Web Sistema</title>
 		<link rel="stylesheet" type="text/css" href="../../estiloak/general.css">
 		<link rel="stylesheet" type="text/css" href="../../estiloak/user_menu/liburu_zerrenda.css">
         <!-- <link rel="stylesheet" type="text/css" href="../../estiloak/index.css"> -->
+=======
+		<title>Liburutegia</title>
+		<link rel="stylesheet" type="text/css" href="../../estiloak/general.css">
+		<link rel="stylesheet" type="text/css" href="../../estiloak/user_menu/liburu_zerrenda.css">
+		<link rel="shortcut icon" href="../../irudiak/book.png" />
+>>>>>>> entrega_1
 	</head>
 	<body>
 		<?php include("../../templates/header.php"); ?>
@@ -53,6 +60,10 @@
 					mysqli_close($conn);
 				?>				
 			</table>
+<<<<<<< HEAD
+=======
+			<button class="home_button" onclick="location.href='user_menu.php'"><img src="../../irudiak/home.png" width="30px"></button>    
+>>>>>>> entrega_1
 		</div>
 	</body>
 </html>
