@@ -17,11 +17,13 @@
         $_SESSION['username'] = $row['Izen_Abizenak'];
         $_SESSION['email'] = $email;
         $_SESSION['ID_USER'] = $row['ID'];
-        error_log("127.0.0.1 user-identifier user_izena [data:ordu] 'Login OK'",3,"../login.log");
+        date_default_timezone_set('Europe/Madrid');
+        error_log("127.0.0.1 user-identifier user_izena [".date('r')."] 'Login OK'",3,"../login.log");
         header("Location: ../orriak/user_menu/user_menu.php");
     }
     else{
-        error_log("127.0.0.1 user-identifier user_izena [data:ordu] 'Login Txarto'",3,"../login.log"); 
+        date_default_timezone_set('Europe/Madrid');
+        error_log("127.0.0.1 user-identifier user_izena [".date('r')."] 'Login Txarto'" . PHP_EOL,3,"../login.log"); 
         header("Location: ../index.php?txarto=1"); 
     }
 
