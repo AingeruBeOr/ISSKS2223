@@ -1,2 +1,2 @@
 mysql
-*.log
+app/*.log
