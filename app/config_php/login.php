@@ -17,10 +17,12 @@
         $_SESSION['username'] = $row['Izen_Abizenak'];
         $_SESSION['email'] = $email;
         $_SESSION['ID_USER'] = $row['ID'];
-        header("Location: ../orriak/user_menu/user_menu.php"); 
+        header("Location: ../orriak/user_menu/user_menu.php");
+        error_log("127.0.0.1 user-identifier user_izena [data:ordu] 'Login OK'",3,"login.log"); 
     }
     else{
         header("Location: ../index.php?txarto=1"); 
+        error_log("127.0.0.1 user-identifier user_izena [data:ordu] 'Login Txarto'",3,"login.log"); 
     }
 
     mysqli_close($conn);
