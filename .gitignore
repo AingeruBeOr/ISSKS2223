@@ -1,2 +1,5 @@
+# "mysql" direktorioa ez da github errepora igoko
 mysql
-app/login.log
+
+# log-ak ez dira errepositoriora igoko
+app/log/*

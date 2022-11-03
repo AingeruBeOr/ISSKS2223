@@ -13,7 +13,11 @@
     $select = "SELECT * FROM usuarios WHERE email = '$email'";
     $query = mysqli_query($conn, $select);
     $num_rows = mysqli_num_rows($query);
-    if($num_rows>=1) header("Location: ../orriak/erregistratu.php?keyerror=1");
+    # email horrekin erabiltzaile bat jadanik existitzen bada:
+    if($num_rows>=1) {
+        error_log("127.0.0.1 user-identifier user_izena [".date('r')."] 'Erregistroa txarto'" .PHP_EOL,3,"../log/register.log");
+        header("Location: ../orriak/erregistratu.php?keyerror=1");
+    }
     else{
         $insert = "INSERT INTO usuarios (`DNI`,`Izen_Abizenak`,`Telefonoa`,`Jaiotze_Data`,`Email`,`Pasahitza`) 
                VALUES ('$NAN','$Izena', '$Telefonoa' ,'$Jaiotze_data','$email','$Pasahitza')" ;
@@ -21,9 +25,11 @@
         $query = mysqli_query($conn, $insert); //or die (mysqli_error($conn));
         
         if(mysqli_errno($conn) == 1062){ //Adierazitako NAN jadanik datu basean badago (1062 error: Duplicate primary entry)
+            error_log("127.0.0.1 user-identifier user_izena [".date('r')."] 'Erregistroa txarto'" .PHP_EOL,3,"../log/register.log");
             header("Location: ../orriak/erregistratu.php?keyerror=2");
         }
         else{
+            error_log("127.0.0.1 user-identifier user_izena [".date('r')."] 'Erabiltzaile Erregistratua'" .PHP_EOL,3,"../log/register.log");
             header("Location: ../orriak/user_menu/user_menu.php");
         }
     } 
