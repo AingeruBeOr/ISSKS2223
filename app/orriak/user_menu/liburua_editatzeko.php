@@ -18,6 +18,7 @@
     $ARGITALPEN_DAT = $row['ARGITALPENDATA'];
     $ORRI_KOP = $row['ORRIALDEKOP'];
     $ARGITALTXE = $row['ARGITALETXEA'];
+
 ?>
 
 <!DOCTYPE html>

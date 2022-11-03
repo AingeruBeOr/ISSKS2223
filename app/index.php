@@ -12,9 +12,9 @@
     if(empty($_GET['txarto'])) $error = 0;
     else $error = 1;
 
-    //header( 'X-Content-Type-Options: nosniff' );
-    //header( 'X-Frame-Options: SAMEORIGIN' );
-    //header( 'X-XSS-Protection: 1;mode=block' );
+header( 'X-Content-Type-Options: nosniff' );
+header( 'X-Frame-Options: SAMEORIGIN' );
+header( 'X-XSS-Protection: 1;mode=block' );
     
 ?>
 
@@ -29,7 +29,6 @@
 
     <body>
         <div class="login-page">
-            <!--TODO: PONER EL H1 EN BONITO MESE_-->
             <h1 class="h1">MUBASA LIBURUTEGIA</h1>
             <div class="form">
                 <form class="login-form" method="post" action="config_php/login.php">

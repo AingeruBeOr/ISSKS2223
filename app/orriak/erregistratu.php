@@ -10,7 +10,11 @@
     }
 
 	if(empty($_GET['keyerror'])) $error = 0;
-    else $error = $_GET['keyerror']
+    else $error = $_GET['keyerror'];
+
+	header( 'X-Content-Type-Options: nosniff' );
+header( 'X-Frame-Options: SAMEORIGIN' );
+header( 'X-XSS-Protection: 1;mode=block' );
    
 ?>
 
