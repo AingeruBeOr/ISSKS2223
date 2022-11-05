@@ -4,6 +4,8 @@
     //sesio berri bat sortzen da:
     session_start();
 
+    //TOKEN KONPROBAKETA FALTA DA BAINA ERRORE EMATEN DU HEADER-AK DEFINITUTA DAUDELAKO LOG-EN BIDEZ
+
     //index.html orritik "POST" bidez lortu ditugun aldagaik:
     $email = $_POST["email"];
     $pasahitza = $_POST["pasahitza"];

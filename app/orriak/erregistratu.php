@@ -12,9 +12,10 @@
 	if(empty($_GET['keyerror'])) $error = 0;
     else $error = $_GET['keyerror'];
 
+	//Anti clickJacking header (php-ren azkenengo lerroak izan behar dute)
 	header( 'X-Content-Type-Options: nosniff' );
-header( 'X-Frame-Options: SAMEORIGIN' );
-header( 'X-XSS-Protection: 1;mode=block' );
+	header( 'X-Frame-Options: SAMEORIGIN' );
+	header( 'X-XSS-Protection: 1;mode=block' );
    
 ?>
 
@@ -31,6 +32,8 @@ header( 'X-XSS-Protection: 1;mode=block' );
 			<div class="login-page">
 				<div class="form">
 					<form class="resgister-form" id="formulario" method="post" action="../config_php/erregistratu.php">
+						
+						<input name="token" type="hidden" value="<?php echo $_SESSION['token']; ?>">
 						<div class="formulario__grupo" id="grupo__izena"> 
 							Izen Abizenak (erabiltzailea): <input type="text" id="Izena" name="Izena" placeholder="Zure erabiltzailea sartu" required>
 						</div>

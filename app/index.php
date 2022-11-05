@@ -12,9 +12,22 @@
     if(empty($_GET['txarto'])) $error = 0;
     else $error = 1;
 
-header( 'X-Content-Type-Options: nosniff' );
-header( 'X-Frame-Options: SAMEORIGIN' );
-header( 'X-XSS-Protection: 1;mode=block' );
+    //Token bat sortu SHA-256 hash algoritmoa erabiliz:
+        
+    //if(empty($_SESSION['token'])){
+        //$ordua = date('H:i');
+        //$id = $_SESSION['ID_USER'];
+        //$token = hash('sha256', $ordua.$id);
+        //$_SESSION['token'] = $token;
+        
+    //}
+
+
+
+    //Anti clickJacking header (php-ren azkenengo lerroak izan behar dute)
+    header( 'X-Content-Type-Options: nosniff' );
+    header( 'X-Frame-Options: SAMEORIGIN' );
+    header( 'X-XSS-Protection: 1;mode=block' );( 'X-XSS-Protection: 1;mode=block' );
     
 ?>
 
@@ -32,6 +45,7 @@ header( 'X-XSS-Protection: 1;mode=block' );
             <h1 class="h1">MUBASA LIBURUTEGIA</h1>
             <div class="form">
                 <form class="login-form" method="post" action="config_php/login.php">
+                    <input type="hidden" name="token" value="<?php echo $_SESSION['token']; ?>">
                     EMAIL: <input type="email" name="email" placeholder="Zure email-a sartu" required><br>
                     PASAHITZA: <input type="password" name="pasahitza" placeholder="Zure pasahitza sartu" required><br>
                     <button>Sartu</button>
