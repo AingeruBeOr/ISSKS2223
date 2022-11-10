@@ -1,13 +1,15 @@
 web:
-   image: web
-   environment:
-     - ALLOW_OVERRIDE=true
-   ports:
-     - "81:80"
-   links:
-     - db
-   volumes:
-     - ./app:/var/www/html/
+  image: web
+  environment:
+    - ALLOW_OVERRIDE=true
+  ports:
+    - "81:80"
+  links:
+    - db
+  volumes:
+    - ./app:/var/www/html/
+  user:
+    - www-data   
 
 db:
   image: mariadb:10.8.2
