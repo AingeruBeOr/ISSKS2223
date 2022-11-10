@@ -14,13 +14,12 @@
 
     //Token bat sortu SHA-256 hash algoritmoa erabiliz:
         
-    //if(empty($_SESSION['token'])){
-        //$ordua = date('H:i');
-        //$id = $_SESSION['ID_USER'];
-        //$token = hash('sha256', $ordua.$id);
-        //$_SESSION['token'] = $token;
+    if(empty($_SESSION['token'])){
+        $ordua = date('H:i');
+        $id = $_SESSION['ID_USER'];
+        $_SESSION['token'] = hash('sha256', $ordua.$id);
         
-    //}
+    }
 
 
 

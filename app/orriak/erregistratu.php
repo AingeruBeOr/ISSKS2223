@@ -32,8 +32,6 @@
 			<div class="login-page">
 				<div class="form">
 					<form class="resgister-form" id="formulario" method="post" action="../config_php/erregistratu.php">
-						
-						<input name="token" type="hidden" value="<?php echo $_SESSION['token']; ?>">
 						<div class="formulario__grupo" id="grupo__izena"> 
 							Izen Abizenak (erabiltzailea): <input type="text" id="Izena" name="Izena" placeholder="Zure erabiltzailea sartu" required>
 						</div>
