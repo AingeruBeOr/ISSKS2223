@@ -6,10 +6,9 @@ web:
     - "81:80"
   links:
     - db
+  user: "www-data"   
   volumes:
     - ./app:/var/www/html/
-  user:
-    - www-data   
 
 db:
   image: mariadb:10.8.2

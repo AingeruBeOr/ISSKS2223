@@ -4,3 +4,4 @@ RUN docker-php-ext-install mysqli
 RUN chown -R www-data:www-data /var/www
 #RUN mkdir /var/www/html
 RUN chown -R www-data:www-data /var/www/html/
+USER www-data
