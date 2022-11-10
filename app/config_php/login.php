@@ -20,21 +20,33 @@
                 $_SESSION['email'] = $email;
                 $_SESSION['ID_USER'] = $row['ID'];
                 date_default_timezone_set('Europe/Madrid');
+                if(!file_exists("../log")){
+                    mkdir("../log", 755);
+                }
                 error_log("127.0.0.1 user-identifier user_izena [".date('r')."] 'Login OK'".PHP_EOL,3,"../log/login.log");
                 header("Location: ../orriak/user_menu/user_menu.php");
             }
             else{
                 date_default_timezone_set('Europe/Madrid');
+                if(!file_exists("../log")){
+                    mkdir("../log", 755);
+                }
                 error_log("127.0.0.1 user-identifier user_izena [".date('r')."] 'Login Txarto'" .PHP_EOL,3,"../log/login.log"); 
                 header("Location: ../index.php?txarto=1"); 
             }
         } else {
             date_default_timezone_set('Europe/Madrid');
+            if(!file_exists("../log")){
+                mkdir("../log", 755);
+            }
             error_log("127.0.0.1 user-identifier user_izena [".date('r')."] 'Login Txarto'" .PHP_EOL,3,"../log/login.log"); 
             header("Location: ../index.php?txarto=1"); 
         }
     }else{
         date_default_timezone_set('Europe/Madrid');
+        if(!file_exists("../log")){
+            mkdir("../log", 755);
+        }
         error_log("127.0.0.1 user-identifier user_izena [".date('r')."] 'Login Txarto'" .PHP_EOL,3,"../log/login.log"); 
         header("Location: ../index.php?txarto=1"); 
       }
