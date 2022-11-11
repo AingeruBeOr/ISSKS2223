@@ -7,6 +7,7 @@
     //TOKEN KONPROBAKETA FALTA DA BAINA ERRORE EMATEN DU HEADER-AK DEFINITUTA DAUDELAKO LOG-EN BIDEZ
     if (!empty($_POST['token'])) {
         if (hash_equals($_SESSION['token'], $_POST['token'])) {
+            //index.html orritik "POST" bidez lortu ditugun aldagaik:
             $email = $_POST["email"];
             $pasahitza = $_POST["pasahitza"];
         
@@ -50,7 +51,7 @@
         error_log("127.0.0.1 user-identifier user_izena [".date('r')."] 'Login Txarto'" .PHP_EOL,3,"../log/login.log"); 
         header("Location: ../index.php?txarto=1"); 
       }
-    //index.html orritik "POST" bidez lortu ditugun aldagaik:
+    
     
 
     mysqli_close($conn);

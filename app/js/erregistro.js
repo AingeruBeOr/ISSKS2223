@@ -7,7 +7,7 @@ const expresiones = {
 	telefonoa: /^[0-9]{9}$/
 }
 
-document.addEventListener("DOMContentLoaded", function(){
+	document.addEventListener("DOMContentLoaded", function(){
 	document.getElementById("formulario").addEventListener('submit', formularioaBalioztatu);
 });
 

@@ -12,6 +12,9 @@
 	if(empty($_GET['keyerror'])) $error = 0;
     else $error = $_GET['keyerror'];
 
+	$_SESSION['token'] = bin2hex(openssl_random_pseudo_bytes(32));
+
+
 	//Anti clickJacking header (php-ren azkenengo lerroak izan behar dute)
 	header( 'X-Content-Type-Options: nosniff' );
 	header( 'X-Frame-Options: SAMEORIGIN' );
@@ -32,6 +35,7 @@
 			<div class="login-page">
 				<div class="form">
 					<form class="resgister-form" id="formulario" method="post" action="../config_php/erregistratu.php">
+						<input type="hidden" name="token" value="<?php echo $_SESSION['token']; ?>">
 						<div class="formulario__grupo" id="grupo__izena"> 
 							Izen Abizenak (erabiltzailea): <input type="text" id="Izena" name="Izena" placeholder="Zure erabiltzailea sartu" required>
 						</div>
@@ -61,7 +65,8 @@
 								if($error==1) echo "Jadanik existitzen da erabiltzaile bat email horrekin.";
 								if($error==2) echo "Jadanik existitzen da erabiltzaile bat NAN horrekin." ;
 							?>
-						</p>       
+						</p> 
+						<meta http-equiv="Content-Security-Policy" content="default-src 'none' ;" >      
 					</form>
 				</div>
 			</div>
