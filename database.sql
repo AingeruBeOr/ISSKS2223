@@ -33,28 +33,29 @@ CREATE TABLE `liburua` (
   `ARGITALPENDATA` date NOT NULL,
   `ORRIALDEKOP` int(11) DEFAULT NULL,
   `ARGITALETXEA` varchar(30) DEFAULT NULL,
-  `ISBN` bigint(13) NOT NULL
+  `ISBN` bigint(13) NOT NULL,
+  `EMAIL` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `liburua`
 --
 
-INSERT INTO `liburua` (`IZENBURUA`, `IDAZLEA`, `ARGITALPENDATA`, `ORRIALDEKOP`, `ARGITALETXEA`, `ISBN`) VALUES
-('Teoria King Kong', 'Virginie Despentes', '2007-10-03', 160, 'Le livre de Poche', 9782253122111),
-('Memorias de una salvaje', 'Bebi Fernandez', '2021-09-29', 464, 'Planeta', 9788408194453),
-('Ser mujer negra en España', 'Desiree Bela-Lobelade', '2018-09-20', 184, 'Plan B', 9788417001650),
-('La buena suerte', 'Rosa Montero', '2020-08-27', 328, 'Alfaguara', 9788420439457),
-('Las madres (la novia gitana 4)', 'Carmen Mola', '2022-09-27', 464, 'Alfaguara', 9788420456027),
-('El peligro de estar cuerda', 'Rosa Montero', '2022-03-30', 360, 'Seix Barral', 9788432240645),
-('El todo', 'Dave Eggers', '2022-05-19', 528, 'Literatura Random House', 9788439711650),
-('Teoria King Kong', 'Virginie Despentes', '2018-01-25', 176, 'Random House', 9788439733850),
-('Una educacion', 'Tara Westover', '2020-10-08', 472, 'Debolsillo', 9788466347846),
-('Izaroko altxorra', 'Iñaki Friera', '2022-01-11', 156, 'SM', 9788483258804),
-('Diario de un skin', 'Antonio Salas', '2006-02-07', 544, 'Temas de hoy', 9788484602507),
-('El palestino', 'Antonio Salas', '2011-06-03', 960, 'Temas de hoy', 9788484604686),
-('Los mil nombres de la libertad', 'Maria Reig', '2022-09-15', 880, 'SUMA', 9788491294054),
-('Teoria King Kong', 'Virginie Despentes', '2020-08-13', 176, 'Faber and Laber Ltd.', 9788494782916);
+INSERT INTO `liburua` (`IZENBURUA`, `IDAZLEA`, `ARGITALPENDATA`, `ORRIALDEKOP`, `ARGITALETXEA`, `ISBN`, `EMAIL`) VALUES
+('Teoria King Kong', 'Virginie Despentes', '2007-10-03', 160, 'Le livre de Poche', 9782253122111, 'mikel@gmail.com'),
+('Memorias de una salvaje', 'Bebi Fernandez', '2021-09-29', 464, 'Planeta', 9788408194453, 'mikel@gmail.com'),
+('Ser mujer negra en España', 'Desiree Bela-Lobelade', '2018-09-20', 184, 'Plan B', 9788417001650, 'mikel@gmail.com'),
+('La buena suerte', 'Rosa Montero', '2020-08-27', 328, 'Alfaguara', 9788420439457, 'mikel@gmail.com'),
+('Las madres (la novia gitana 4)', 'Carmen Mola', '2022-09-27', 464, 'Alfaguara', 9788420456027, 'mikel@gmail.com'),
+('El peligro de estar cuerda', 'Rosa Montero', '2022-03-30', 360, 'Seix Barral', 9788432240645, 'mikel@gmail.com'),
+('El todo', 'Dave Eggers', '2022-05-19', 528, 'Literatura Random House', 9788439711650, 'mikel@gmail.com'),
+('Teoria King Kong', 'Virginie Despentes', '2018-01-25', 176, 'Random House', 9788439733850, 'mikel@gmail.com'),
+('Una educacion', 'Tara Westover', '2020-10-08', 472, 'Debolsillo', 9788466347846, 'mikel@gmail.com'),
+('Izaroko altxorra', 'Iñaki Friera', '2022-01-11', 156, 'SM', 9788483258804, 'mikel@gmail.com'),
+('Diario de un skin', 'Antonio Salas', '2006-02-07', 544, 'Temas de hoy', 9788484602507, 'mikel@gmail.com'),
+('El palestino', 'Antonio Salas', '2011-06-03', 960, 'Temas de hoy', 9788484604686, 'mikel@gmail.com'),
+('Los mil nombres de la libertad', 'Maria Reig', '2022-09-15', 880, 'SUMA', 9788491294054, 'mikel@gmail.com'),
+('Teoria King Kong', 'Virginie Despentes', '2020-08-13', 176, 'Faber and Laber Ltd.', 9788494782916, 'mikel@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -68,7 +69,7 @@ CREATE TABLE `usuarios` (
   `Izen_Abizenak` text NOT NULL,
   `Telefonoa` int(9) NOT NULL,
   `Jaiotze_Data` date NOT NULL,
-  `Email` text NOT NULL,
+  `Email` varchar(50) NOT NULL,
   `Pasahitza` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -91,7 +92,7 @@ INSERT INTO `usuarios` (`ID`, `DNI`, `Izen_Abizenak`, `Telefonoa`, `Jaiotze_Data
 -- Indices de la tabla `liburua`
 --
 ALTER TABLE `liburua`
-  ADD PRIMARY KEY (`ISBN`);
+  ADD PRIMARY KEY (`ISBN`, `EMAIL`);
 
 --
 -- Indices de la tabla `usuarios`

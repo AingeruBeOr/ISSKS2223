@@ -37,7 +37,7 @@
             <div class="form">
                 <meta http-equiv="Content-Security-Policy" content="default-src 'none' ;" >
                 <form class="login-form" method="post" action="config_php/login.php">
-                    <input type="hidden" name="token" value="<?php echo $_SESSION['token']; ?>">
+                    <input type="hidden" name="csrf" value="<?php echo $_SESSION['token']; ?>">
                     EMAIL: <input type="email" name="email" placeholder="Zure email-a sartu" required><br>
                     PASAHITZA: <input type="password" name="pasahitza" placeholder="Zure pasahitza sartu" required><br>
                     <button>Sartu</button>
