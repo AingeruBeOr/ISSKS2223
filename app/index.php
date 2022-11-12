@@ -12,9 +12,8 @@
     if(empty($_GET['txarto'])) $error = 0;
     else $error = 1;
 
-    //Token bat sortu SHA-256 hash algoritmoa erabiliz:      
+    //Token bat sortu SHA-256 hash algoritmoa erabiliz:
     $_SESSION['token'] = bin2hex(openssl_random_pseudo_bytes(32));
-        
 
     //Anti clickJacking header (php-ren azkenengo lerroak izan behar dute)
     header( 'X-Content-Type-Options: nosniff' );
