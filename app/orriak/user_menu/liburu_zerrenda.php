@@ -9,7 +9,6 @@
     if(!isset($erabiltzaile)){
         header("location: ../../index.php");
     }
-	echo $_SESSION['token'];
 	
 ?>
 

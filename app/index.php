@@ -20,7 +20,6 @@
         $_SESSION['token'] = $token;
 
     }
-    echo $_SESSION['token'];
 
     //Anti clickJacking header (php-ren azkenengo lerroak izan behar dute)
     header( 'X-Content-Type-Options: nosniff' );

@@ -14,7 +14,6 @@
     $id = $_SESSION['ID_USER'];
     $token = hash('sha256', $ordua.$id);
     $_SESSION['token'] = $token;
-    echo $_SESSION['token'];
 
 ?>
 
