@@ -4,3 +4,4 @@ RUN docker-php-ext-install mysqli
 # Direktorioaren jabe www-data izateko:
 RUN usermod -u 1000 www-data
 RUN groupmod -g 1000 www-data
+RUN chown www-data:www-data /var/log/apache2/
