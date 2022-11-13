@@ -12,8 +12,14 @@
 	if(empty($_GET['keyerror'])) $error = 0;
     else $error = $_GET['keyerror'];
 
-	$_SESSION['token'] = bin2hex(openssl_random_pseudo_bytes(32));
+	//Token bat sortu SHA-256 hash algoritmoa erabiliz:
+    if(empty($_SESSION['token'])){
+        $ordua = date('H:i');
+        $id = $_SESSION['ID_USER'];
+        $token = hash('sha256', $ordua.$id);
+        $_SESSION['token'] = $token;
 
+    }
 
 	//Anti clickJacking header (php-ren azkenengo lerroak izan behar dute)
 	header( 'X-Content-Type-Options: nosniff' );

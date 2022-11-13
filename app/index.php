@@ -13,7 +13,14 @@
     else $error = 1;
 
     //Token bat sortu SHA-256 hash algoritmoa erabiliz:
-    $_SESSION['token'] = bin2hex(openssl_random_pseudo_bytes(32));
+    if(empty($_SESSION['token'])){
+        $ordua = date('H:i');
+        $id = $_SESSION['ID_USER'];
+        $token = hash('sha256', $ordua.$id);
+        $_SESSION['token'] = $token;
+
+    }
+    echo $_SESSION['token'];
 
     //Anti clickJacking header (php-ren azkenengo lerroak izan behar dute)
     header( 'X-Content-Type-Options: nosniff' );

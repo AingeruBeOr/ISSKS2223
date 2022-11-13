@@ -40,6 +40,7 @@
 			<div class="login-page">
 				<div class="form">
 					<form class="resgister-form" id="formulario" method="post" action="../../config_php/datuak_aldatu.php">
+						<input type="hidden" name="csrf" value="<?php echo $_SESSION['token']; ?>">
 						<div class="formulario__grupo" id="grupo__nan">
 							NAN: <input type="text" id="NAN" name="NAN" value="<?php echo $DNI ?>" required>
 						</div>

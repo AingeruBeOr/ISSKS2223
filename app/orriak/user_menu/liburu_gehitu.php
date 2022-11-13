@@ -28,6 +28,7 @@
             <div class="login-page">
                 <div class="form">
                     <form class="resgister-form" id="liburuDatu" method="post" action="../../config_php/liburuak_sartu.php">
+                        <input type="hidden" name="csrf" value="<?php echo $_SESSION['token']; ?>">
                         Izenburua: <input type="text" id="izenburua" name="izenburua" placeholder="Harry Potter 2" required>
                         Idazlea: <input type="text" id="idazlea" name="idazlea" placeholder="J K Rowling" required>
                         Argitalpen data: <input type="date"  id="ArgitalpenData" name="ArgitalpenData" required>

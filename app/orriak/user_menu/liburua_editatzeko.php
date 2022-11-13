@@ -35,6 +35,7 @@
 			<div class="login-page">
 				<div class="form">
 					<form class="resgister-form" id="formulario" method="post" action="../../config_php/liburua_editatu.php">
+						<input type="hidden" name="csrf" value="<?php echo $_SESSION['token']; ?>">
                         <div class="formulario__grupo" id="grupo__pasahitza">
                             ISBN (ezin da aldatu): <input type= "text" name="ISBN" value="<?php echo $ISBN ?>" readonly>
                         </div>

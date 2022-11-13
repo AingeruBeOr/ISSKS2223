@@ -9,6 +9,13 @@
         header("location: ../../index.php");
     }
 
+    //Token bat sortu SHA-256 hash algoritmoa erabiliz:
+    $ordua = date('H:i');
+    $id = $_SESSION['ID_USER'];
+    $token = hash('sha256', $ordua.$id);
+    $_SESSION['token'] = $token;
+    echo $_SESSION['token'];
+
 ?>
 
 <!DOCTYPE html>
