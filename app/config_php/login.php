@@ -11,11 +11,14 @@
             $email = $_POST["email"];
             $pasahitza = $_POST["pasahitza"];
         
-            $query = mysqli_query($conn, "SELECT * FROM usuarios WHERE email = '".$email."' and Pasahitza = '".$pasahitza."'") or die (mysqli_error($conn));
-            $num_rows = mysqli_num_rows($query);
-            $row = mysqli_fetch_array($query);
+            $stmt = $conn->prepare("SELECT * FROM usuarios WHERE email = ? and Pasahitza = ?");
+            $stmt->bind_param("ss", $email, $pasahitza); //"ss" emaila eta pasahitza String motakoak direla adierazten du
+            $stmt->execute();
+            $result = $stmt->get_result();
+            $num_rows = mysqli_num_rows($result);
+            $row = mysqli_fetch_array($result);
         
-            if($num_rows >= 1){
+            if($num_rows == 1){
                 //erabiltzailea eta pasahitza ondo sartu badira, "user_menu.html" orrira joango gara.
                 $_SESSION['username'] = $row['Izen_Abizenak'];
                 $_SESSION['email'] = $email;
