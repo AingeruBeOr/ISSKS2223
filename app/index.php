@@ -1,5 +1,7 @@
 <?php
 
+    ini_set('session.cookie_httponly', 1);  	# Cookie No HttpOnly Flag
+
     session_start();
 
     $erabiltzaile = $_SESSION['username'];
