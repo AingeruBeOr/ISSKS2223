@@ -1,7 +1,5 @@
 <?php
 
-    ini_set('session.cookie_httponly', 1);  	# Cookie No HttpOnly Flag
-
     session_start();
 
     $erabiltzaile = $_SESSION['username'];
@@ -28,7 +26,7 @@
     header( 'X-Frame-Options: SAMEORIGIN' );
     header( 'X-XSS-Protection: 1;mode=block' );
     header_remove("X-Powered-By");
-    header("Set-Cookie: key=value; path=/; domain=example.org; HttpOnly; SameSite=Lax");
+    header("Set-Cookie: key=value; path=/; domain=example.org; HttpOnly; SameSite=Lax"); # Cookie No HttpOnly Flag && SameSite
     
 ?>
 
