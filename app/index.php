@@ -28,6 +28,7 @@
     header( 'X-Frame-Options: SAMEORIGIN' );
     header( 'X-XSS-Protection: 1;mode=block' );
     header_remove("X-Powered-By");
+    header("Set-Cookie: key=value; path=/; domain=example.org; HttpOnly; SameSite=Lax");
     
 ?>
 
