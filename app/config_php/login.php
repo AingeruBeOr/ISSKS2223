@@ -11,14 +11,16 @@
             $email = $_POST["email"];
             $pasahitza = $_POST["pasahitza"];
         
-            $stmt = $conn->prepare("SELECT * FROM usuarios WHERE email = ? and Pasahitza = ?");
-            $stmt->bind_param("ss", $email, $pasahitza); //"ss" emaila eta pasahitza String motakoak direla adierazten du
+            $stmt = $conn->prepare("SELECT * FROM usuarios WHERE email = ?");
+            $stmt->bind_param("s", $email); //"s" emaila String motakoak dela adierazten du
             $stmt->execute();
             $result = $stmt->get_result();
             $num_rows = mysqli_num_rows($result);
             $row = mysqli_fetch_array($result);
+            
+            $pasahitza_zuzen = password_verify($pasahitza, $row['Pasahitza']);
         
-            if($num_rows == 1){
+            if($num_rows == 1 and $pasahitza_zuzen){
                 //erabiltzailea eta pasahitza ondo sartu badira, "user_menu.html" orrira joango gara.
                 $_SESSION['username'] = $row['Izen_Abizenak'];
                 $_SESSION['email'] = $email;
@@ -26,11 +28,20 @@
                 loga_erregistratu(true);
                 header("Location: ../orriak/user_menu/user_menu.php");
             }
-            else header("Location: ../index.php?txarto=1");
+            else {
+                loga_erregistratu(false);
+                header("Location: ../index.php?txarto=1");
+            }    
         } 
-        else header("Location: ../index.php?txarto=1");
+        else {
+            loga_erregistratu(false);
+            header("Location: ../index.php?txarto=1");
+        }
     }
-    else header("Location: ../index.php?txarto=1");
+    else {
+        loga_erregistratu(false);
+        header("Location: ../index.php?txarto=1");
+    }
 
     function loga_erregistratu($egoera){
         date_default_timezone_set('Europe/Madrid');

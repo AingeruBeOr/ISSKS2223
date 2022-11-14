@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: db
--- Tiempo de generación: 14-11-2022 a las 11:56:53
+-- Tiempo de generación: 14-11-2022 a las 16:04:13
 -- Versión del servidor: 10.8.2-MariaDB-1:10.8.2+maria~focal
 -- Versión de PHP: 8.0.19
 
@@ -78,11 +78,11 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`ID`, `DNI`, `Izen_Abizenak`, `Telefonoa`, `Jaiotze_Data`, `Email`, `Pasahitza`) VALUES
-(1, '00000023-T', 'mikel', 123456789, '2002-03-05', 'mikel@gmail.com', '1234'),
-(2, '00000024-R', 'Proba erabiltzailea', 987654321, '2020-01-07', 'proba@proba.es', 'qwerty'),
-(3, '00000025-W', 'aitor', 987654321, '2006-07-04', 'aitor@gmail.com', '5678'),
-(4, '33333333-A', 'Pepe', 676666623, '2022-10-11', 'perro@gmail.com', '1357'),
-(5, '37242837-H', 'Proba', 654654654, '2012-01-01', 'proba2@proba.com', 'hola1234');
+(1, '00000023-T', 'mikel', 123456789, '2002-03-05', 'mikel@gmail.com', '$2y$10$nQkEyrm5U23SyqB6LTtM5.SGfIhtmW5MmuJ2rKE7mRWvbrjDp/JB6'),
+(2, '00000024-R', 'Proba erabiltzailea', 987654321, '2020-01-07', 'proba@proba.es', '$2y$10$9k0nACFhTwWhS38/Bp7M9uC1fMGr6w2FvHxZHXv8OR/HqtQ8YpJoq'),
+(3, '00000025-W', 'aitor', 987654321, '2006-07-04', 'aitor@gmail.com', '$2y$10$e0toQKd89nN9zgKVdQWGluKMoz4zdEyGtAxyPJqj77120qOptNwdG'),
+(4, '33333333-P', 'Pepe', 676666623, '2022-10-11', 'perro@gmail.com', '$2y$10$pNlvKGI5QT1Q9Z.QJ.nKtON5pUDQUgUocOb3H2G5Ypvm56hylx8Ve'),
+(5, '37242837-H', 'Proba', 654654654, '2012-01-01', 'proba2@proba.com', '$2y$10$qSaQO0xUPrS7naV1lqhgPO.oXqxw1SNDeKGJUgxqU6UvUEvvVtP0m');
 
 --
 -- Índices para tablas volcadas
@@ -111,7 +111,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
