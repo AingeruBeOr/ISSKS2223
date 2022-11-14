@@ -6,9 +6,9 @@
 
     $ISBN= $_GET["isbn"];
     
-    $delete = "DELETE FROM liburua WHERE ISBN='$ISBN' and Email ='".$Email."'";//TODO
-
-    $query = mysqli_query($conn, $delete) or die (mysqli_error($conn));
+    $stmt = $conn->prepare("DELETE FROM liburua WHERE ISBN = ? and Email = ?");
+    $stmt->bind_param("is", $ISBN, $Email);
+    $stmt->execute();
 
     header("Location: ../orriak/user_menu/liburu_zerrenda.php");
 ?>
