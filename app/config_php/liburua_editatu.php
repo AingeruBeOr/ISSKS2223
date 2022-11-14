@@ -13,13 +13,18 @@
             $Orri_kop = $_POST['Orri_kop'];
             $Argitaletxe = $_POST['Argitaletxe'];
 
-            $query = mysqli_query($conn, "UPDATE liburua SET IZENBURUA = '$Izenburua', IDAZLEA='$Idazlea',ARGITALPENDATA='$Argitalpen_dat',ORRIALDEKOP='$Orri_kop',ARGITALETXEA='$Argitaletxe' WHERE ISBN='$ISBN' and Email ='".$Email."'") or die (mysqli_error($conn));
+
+            $stmt = $conn->prepare("UPDATE liburua SET IZENBURUA = ?, IDAZLEA = ?, ARGITALPENDATA = ?, ORRIALDEKOP = ?, ARGITALETXEA = ? WHERE ISBN = ? and Email = ?");
+            $stmt->bind_param("sssisis", $Izenburua, $Idazlea, $Argitalpen_dat, $Orri_kop, $Argitaletxe, $ISBN, $Email);
+            $stmt->execute();
             
             header("Location: ../orriak/user_menu/liburu_zerrenda.php");
-        }else{
+        }
+        else{
             header("location: ../index.php");
         }
-    }else{
+    }
+    else{
         header("location: ../index.php");
     }
 
