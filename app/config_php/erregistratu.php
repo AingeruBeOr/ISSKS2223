@@ -27,9 +27,13 @@
                 header("Location: ../orriak/erregistratu.php?keyerror=1");
             }
             else{
+                // Pasahitzari gatza gehitu eta hasheatu:
+                $hash = password_hash($Pasahitza, PASSWORD_DEFAULT, [15]);
+
+                // Erabiltzaile datu basean sartzen saiatu:
                 $stmt = $conn->prepare("INSERT INTO usuarios (`DNI`,`Izen_Abizenak`,`Telefonoa`,`Jaiotze_Data`,`Email`,`Pasahitza`) 
                                         VALUES (?,?,?,?,?,?)");
-                $stmt->bind_param("ssisss",$NAN, $Izena, $Telefonoa, $Jaiotze_data, $email, $Pasahitza);
+                $stmt->bind_param("ssisss",$NAN, $Izena, $Telefonoa, $Jaiotze_data, $email, $hash);
                 $stmt->execute();
                 
                 if(mysqli_errno($conn) == 1062){ //Adierazitako NAN jadanik datu basean badago (1062 error: Duplicate primary entry)

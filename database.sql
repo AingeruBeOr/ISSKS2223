@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: db
--- Tiempo de generación: 15-10-2022 a las 16:38:48
+-- Tiempo de generación: 14-11-2022 a las 11:56:53
 -- Versión del servidor: 10.8.2-MariaDB-1:10.8.2+maria~focal
 -- Versión de PHP: 8.0.19
 
@@ -70,7 +70,7 @@ CREATE TABLE `usuarios` (
   `Telefonoa` int(9) NOT NULL,
   `Jaiotze_Data` date NOT NULL,
   `Email` varchar(50) NOT NULL,
-  `Pasahitza` varchar(50) NOT NULL
+  `Pasahitza` varchar(60) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -92,7 +92,7 @@ INSERT INTO `usuarios` (`ID`, `DNI`, `Izen_Abizenak`, `Telefonoa`, `Jaiotze_Data
 -- Indices de la tabla `liburua`
 --
 ALTER TABLE `liburua`
-  ADD PRIMARY KEY (`ISBN`, `EMAIL`);
+  ADD PRIMARY KEY (`ISBN`,`EMAIL`);
 
 --
 -- Indices de la tabla `usuarios`
@@ -101,7 +101,7 @@ ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`ID`),
   ADD UNIQUE KEY `DNI` (`DNI`),
   ADD UNIQUE KEY `ID` (`ID`),
-  ADD UNIQUE KEY `Email` (`Email`) USING HASH;
+  ADD UNIQUE KEY `Email` (`Email`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -111,7 +111,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
