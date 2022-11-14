@@ -4,7 +4,6 @@
     //sesio berri bat sortzen da:
     session_start();
 
-    //TOKEN KONPROBAKETA FALTA DA BAINA ERRORE EMATEN DU HEADER-AK DEFINITUTA DAUDELAKO LOG-EN BIDEZ
     if (!empty($_POST['csrf'])) {
         if (hash_equals($_SESSION['token'], $_POST['csrf'])) {
             //index.html orritik "POST" bidez lortu ditugun aldagaik:

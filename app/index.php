@@ -26,7 +26,8 @@
     //Anti clickJacking header (php-ren azkenengo lerroak izan behar dute)
     header( 'X-Content-Type-Options: nosniff' );
     header( 'X-Frame-Options: SAMEORIGIN' );
-    header( 'X-XSS-Protection: 1;mode=block' );( 'X-XSS-Protection: 1;mode=block' );
+    header( 'X-XSS-Protection: 1;mode=block' );
+    header_remove("X-Powered-By");
     
 ?>
 
