@@ -4,7 +4,8 @@ const expresiones = {
 	data: /^[0-9]{4}\-[0-9]{2}\-[0-9]{2}$/,
 	izena: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
 	email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$/,
-	telefonoa: /^[0-9]{9}$/
+	telefonoa: /^[0-9]{9}$/,
+	pasahitza: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){8,15}$/
 }
 
 document.addEventListener("DOMContentLoaded", function(){
@@ -76,6 +77,12 @@ function formularioaBalioztatu(evento){
             p2.style.border = "2px solid red";
             return;
         }
+		if(!expresiones.pasahitza.test(p1.value)){
+			errore_mezu.innerHTML="Pasahitza 8-15 karaktere izan behar ditu, letra larri, zenbaki eta karaktere berezi (@, $, !, &...) bana izan behar ditu (hutsunik gabe).";
+			p1.style.border = "2px solid red";
+			p2.style.border = "2px solid red";
+			return;
+		}
     }
 	console.log("Control 5")
 	console.log(zure_pasahitza.value);

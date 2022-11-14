@@ -20,18 +20,20 @@
             $stmt->execute();
             $result = $stmt->get_result();            
             $row = mysqli_fetch_array($result);
-            
-            $NirePasahitza = $row['Pasahitza'];
 
-            if($NirePasahitza==$Zure_pasahitza){
+            $pasahitza_zuzen = password_verify($Zure_pasahitza, $row['Pasahitza']);
+
+            if($pasahitza_zuzen){
                 if(empty($Pasahitz)){
                     $stmt->prepare("UPDATE usuarios SET DNI = ?, IZEN_ABIZENAK = ?, TELEFONOA = ?, JAIOTZE_DATA = ?, EMAIL = ? WHERE ID = ?");
                     $stmt->bind_param("ssissi",$NAN, $Izena, $Telefonoa, $Jaiotze_data, $Email, $id);
                     $stmt->execute();
                 } 
                 else {
+                     // Pasahitzari gatza gehitu eta hasheatu:
+                    $hash = password_hash($Pasahitz, PASSWORD_DEFAULT, [15]);
                     $stmt->prepare("UPDATE usuarios SET DNI = ?, IZEN_ABIZENAK = ?, TELEFONOA = ?, JAIOTZE_DATA = ?, EMAIL = ?, PASAHITZA = ? WHERE ID = ?");
-                    $stmt->bind_param("ssissi",$NAN, $Izena, $Telefonoa, $Jaiotze_data, $Email, $Pasahitz, $id);
+                    $stmt->bind_param("ssisssi",$NAN, $Izena, $Telefonoa, $Jaiotze_data, $Email, $hash, $id);
                     $stmt->execute();
                 }
                 $_SESSION['username'] = $Izena; 
