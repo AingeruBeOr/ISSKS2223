@@ -65,5 +65,6 @@
 				?>				
 			<button class="home_button" onclick="location.href='user_menu.php'"><img src="../../irudiak/home.png" width="30px"></button>    
 		</div>
+		<script scr="../../js/logout.js"></script>
 	</body>
 </html>

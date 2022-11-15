@@ -35,9 +35,6 @@
                 <button><a href="../../config_php/logout.php">Saioa itxi</a></button>
             </div>
         </div>
-        <!-- <a href="datuen_aldaketa.html">Nire datuak aldatu</a> -->
-        <!-- <a href="liburu_zerrenda.html">Liburuen zerrenda ikusi</a>
-        <a href="liburu_gehitu.html">Liburua gehitu</a>
-        <a href="../index.html"></a> -->
+        <script scr="../../js/logout.js"></script>
     </body>
 </html>

@@ -82,5 +82,6 @@
 			</div>
 			<script src="../../js/datuen_aldaketa.js"></script>
 		</main>
+		<script scr="../../js/logout.js"></script>
     </body>
 </html>

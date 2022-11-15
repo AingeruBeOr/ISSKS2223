@@ -43,5 +43,6 @@
             </div>
             <script src="../../js/liburu_gehitu.js"></script>
         </main>
+        <script scr="../../js/logout.js"></script>
     </body>
 </html>

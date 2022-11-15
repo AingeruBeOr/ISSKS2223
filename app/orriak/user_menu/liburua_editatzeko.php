@@ -63,5 +63,6 @@
 			</div>
 			<script src="../../js/liburua_editatzeko.js"></script>
 		</main>
+		<script scr="../../js/logout.js"></script>
     </body>
 </html>
