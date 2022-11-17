@@ -10,7 +10,7 @@
     
     if(empty($_GET['txarto'])) $error = 0;
     else $error = 1;
-    header("Set-Cookie: key=value; path=/; domain=example.org; HttpOnly; SameSite=Lax"); # Cookie No HttpOnly Flag && SameSite
+    header("Set-Cookie: path=/; HttpOnly; SameSite=Lax"); # Cookie No HttpOnly Flag && SameSite
     
     //Token bat sortu SHA-256 hash algoritmoa erabiliz:
     if(empty($_SESSION['token'])){
