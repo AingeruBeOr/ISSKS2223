@@ -65,6 +65,18 @@
 				?>				
 			<button class="home_button" onclick="location.href='user_menu.php'"><img src="../../irudiak/home.png" width="30px"></button>    
 		</div>
-		<script scr="../../js/logout.js"></script>
+		<script>
+			//Aktibitaterik ez egotekotan 2 minutuz log-out egingo du (arratoia ez bada mugitzen):
+            n=120
+            var id = window.setInterval(() => {
+                document.onmousemove= function(){
+                    n=120
+                };
+                n--;
+                if(n <= -1){
+                    location.href = "../../config_php/logout.php";
+                }
+            }, 1200);
+		</script>
 	</body>
 </html>

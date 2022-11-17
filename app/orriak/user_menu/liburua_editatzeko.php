@@ -63,6 +63,18 @@
 			</div>
 			<script src="../../js/liburua_editatzeko.js"></script>
 		</main>
-		<script scr="../../js/logout.js"></script>
+		<script>
+			//Aktibitaterik ez egotekotan 2 minutuz log-out egingo du (arratoia ez bada mugitzen):
+            n=120
+            var id = window.setInterval(() => {
+                document.onmousemove= function(){
+                    n=120
+                };
+                n--;
+                if(n <= -1){
+                    location.href = "../../config_php/logout.php";
+                }
+            }, 1200);
+		</script>
     </body>
 </html>
