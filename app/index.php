@@ -2,11 +2,6 @@
     ini_set('session.cookie_secure', "1"); 
     ini_set('session.cookie_httponly', "1"); # Cookie No HttpOnly Flag
 
-    #SAME SITE COOKIES TIENE QUE ESTAR A LAX:
-    
-    #ini_set('session.cookie_samesite','Lax')
-    #session_set_cookie_params('['samesite' => 'lax']');
-    #session_set_cookie_params('samesite', 'Lax');
     session_start();
 
     $erabiltzaile = $_SESSION['username'];
@@ -29,7 +24,6 @@
     }
 
     //Anti clickJacking header (php-ren azkenengo lerroak izan behar dute)
-    #header("Set-Cookie: path=/; HttpOnly; SameSite=None"); # Cookie No HttpOnly Flag && SameSite
     header( 'X-Content-Type-Options: nosniff' );
     header( 'X-Frame-Options: SAMEORIGIN' );
     header( 'X-XSS-Protection: 1;mode=block' );
