@@ -5,7 +5,8 @@ var id = window.setInterval(() => {
         n=120
     };
     n--;
+    console.log("pasa");
     if(n <= -1){
         location.href = "../../config_php/logout.php";
     }
-}, 1200);
+}, 1000);
