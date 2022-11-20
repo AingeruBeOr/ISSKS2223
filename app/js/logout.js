@@ -1,8 +1,8 @@
 //Aktibitaterik ez egotekotan 2 minutuz log-out egingo du (arratoia ez bada mugitzen):
-n=5
+n=120
 var id = window.setInterval(() => {
     document.onmousemove= function(){
-        n=5
+        n=120
     };
     n--;
     if(n <= -1){
