@@ -18,7 +18,8 @@
     if(empty($_SESSION['token'])){
         $ordua = date('H:i');
         $id = $_SESSION['ID_USER'];
-        $token = hash('sha256', $ordua.$id);
+        $bites =openssl_random_pseudo_bytes(32);
+        $token = hash('sha256', $ordua.$id.$bites);
         $_SESSION['token'] = $token;
 
     }

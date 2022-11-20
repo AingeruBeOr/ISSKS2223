@@ -69,23 +69,22 @@ function formularioaBalioztatu(evento){
 		return;
 	}
 	console.log("Control 4")
-	
-    if(p1.value!=null || p2.value!=null){
+    if(p1.value!="" || p2.value!=""){
         if(p1.value!=p2.value){
             errore_mezu.innerHTML="Pasahitzek ez dute bat egiten.";
             p1.style.border = "2px solid red";
             p2.style.border = "2px solid red";
             return;
         }
-		if(!expresiones.pasahitza.test(p1.value)){
-			errore_mezu.innerHTML="Pasahitza 8-15 karaktere izan behar ditu, letra larri, zenbaki eta karaktere berezi (@, $, !, &...) bana izan behar ditu (hutsunik gabe).";
-			p1.style.border = "2px solid red";
-			p2.style.border = "2px solid red";
-			return;
-		}
+		console.log("Control 5")
     }
-	console.log("Control 5")
-	console.log(zure_pasahitza.value);
+	if(p1.value!="" && !expresiones.pasahitza.test(p1.value)){
+		errore_mezu.innerHTML="Pasahitza 8-15 karaktere izan behar ditu, letra larri, zenbaki eta karaktere berezi (@, $, !, &...) bana izan behar ditu (hutsunik gabe).";
+		p1.style.border = "2px solid red";
+		p2.style.border = "2px solid red";
+		return;
+	}
+	console.log("Control 6");
 	if(zure_pasahitza.value == ""){
 		zure_pasahitza.style.border = "2px solid red";
 		errore_mezu.innerHTML = "Zure pasahitza sartu datuak aldatzeko.";

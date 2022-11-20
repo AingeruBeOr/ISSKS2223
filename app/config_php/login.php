@@ -24,6 +24,14 @@
                 $_SESSION['username'] = $row['Izen_Abizenak'];
                 $_SESSION['email'] = $email;
                 $_SESSION['ID_USER'] = $row['ID'];
+
+                //Token bat sortu SHA-256 hash algoritmoa erabiliz:
+                $ordua = date('H:i');
+                $id = $_SESSION['ID_USER'];
+                $bites =openssl_random_pseudo_bytes(32);
+                $token = hash('sha256', $ordua.$id.$bites);
+                $_SESSION['token'] = $token;
+                
                 loga_erregistratu(true);
                 header("Location: ../orriak/user_menu/user_menu.php");
             }
